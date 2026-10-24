@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#0a0e16","surface-tint":"#00dbe9","inverse-surface":"#dfe2ee","error-container":"#93000a","on-surface":"#dfe2ee","tertiary":"#d8ffe7","inverse-primary":"#006970","on-error":"#690005","surface-variant":"#31353e","tertiary-fixed":"#6ffbbe","secondary":"#d0bcff","outline-variant":"#3b494b","on-background":"#dfe2ee","inverse-on-surface":"#2c3039","error":"#ffb4ab","surface-container-high":"#262a33","on-secondary-container":"#c4abff","secondary-fixed-dim":"#d0bcff","secondary-fixed":"#e9ddff","surface-dim":"#0f131c","on-tertiary":"#003824","primary-container":"#00f0ff","surface-container-highest":"#31353e","on-tertiary-fixed-variant":"#005236","primary-fixed-dim":"#00dbe9","primary-fixed":"#7df4ff","on-primary-fixed":"#002022","on-error-container":"#ffdad6","on-primary-container":"#006970","surface-container-low":"#181c24","primary":"#dbfcff","on-tertiary-container":"#006d4a","on-tertiary-fixed":"#002113","surface-container":"#1c2028","on-primary-fixed-variant":"#004f54","on-secondary":"#3c0091","on-surface-variant":"#b9cacb","secondary-container":"#571bc1","on-primary":"#00363a","outline":"#849495","on-secondary-fixed":"#23005c","tertiary-fixed-dim":"#4edea3","surface":"#0f131c","surface-bright":"#353942","tertiary-container":"#65f2b5","background":"#0f131c","on-secondary-fixed-variant":"#5516be"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"2rem","margin-mobile":"1rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","space-sm":"0.5rem","gutter-mobile":"0.75rem","gutter":"1.5rem"},fontFamily:{"body-md":["Inter"],"label-md":["Inter"],"title-sm":["Inter"],"code-lg":["JetBrains Mono"],"label-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"code-sm":["JetBrains Mono"],"headline-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-xl":["Plus Jakarta Sans"],"code-md":["JetBrains Mono"],"body-sm":["Inter"]},fontSize:{"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"code-lg":["14px",{"lineHeight":"22px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"code-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-md":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm"><img alt="NexusNode Cloud Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wnx1Ne8D7AraCUMkqq5zUDlMaM9lfwUjzF9c_ZTM1Fjc7OOdzokRM533DKwky9Sho8Ina6YJH_2ldZnczeJD4pVlEpGlSNenwRQkIKZtSAosKD-acuC2SexxiYWYHUm65R5IYBOEHPh3POpDjIRh8J2VG7qvCh6U3FwQkU1q1-Y_3v8NC0NI5bgj8uYPSMa1JXUK3-sI64Jn4BE2_SdJFQOxxmRMud29d5Z3l2rg5IcKdBO0QTXLN6_WY"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-none">NexusNode</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-tint mt-0.5">Game Hosting</span></div></div><div class="px-space-md py-space-sm"><div class="bg-surface-container-low px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-fixed-dim"></span></span><span class="font-code-sm text-code-sm text-on-surface-variant">Network Core</span></div><span class="font-code-sm text-code-sm text-tertiary-fixed font-semibold">99.98%</span></div></div><nav class="flex flex-col gap-1 px-space-md mt-space-sm" data-active-classes="bg-surface-container-high text-primary-container font-semibold shadow-[inset_0_0_12px_rgba(0,240,255,0.15)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="tong-quan" href="index.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Tổng quan</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="thue-server" href="thue-server.html"><span class="material-symbols-outlined text-[20px]">dns</span><span class="font-label-md text-label-md">Thuê Server</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="quan-ly-server" href="quan-ly-server.html"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-label-md text-label-md">Quản lý Server</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="nap-tien-vi" href="nap-tien-vi.html"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-md text-label-md">Nạp tiền &amp; Ví</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="tai-lieu-api" href="tai-lieu-api.html"><span class="material-symbols-outlined text-[20px]">code_blocks</span><span class="font-label-md text-label-md">Tài liệu &amp; API</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="cai-dat" href="cai-dat.html"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Cài đặt</span></a></nav></div><div class="p-space-md"><div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="h-2 w-2 rounded-full bg-primary-container shadow-[0_0_8px_#00f0ff]"></div><div class="flex flex-col"><span class="font-code-sm text-code-sm text-on-surface-variant">Datacenter</span><span class="font-label-sm text-label-sm text-on-surface">VN-HN-01</span></div></div><span class="font-code-sm text-code-sm text-surface-tint">12ms</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="w-full h-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-11 pr-space-md py-space-sm bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Tìm kiếm máy chủ, node IP, tài liệu..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span></span><span class="font-code-sm text-code-sm text-on-surface-variant">Status:</span><span class="font-code-sm text-code-sm text-tertiary font-medium">Online 99.98%</span></div><div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-xs rounded-full"><div class="flex flex-col items-end"><span class="font-code-sm text-code-sm text-outline">Số dư</span><span class="font-code-md text-code-md text-primary font-semibold">250.000đ</span></div><button class="bg-primary-container text-on-primary-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-semibold hover:bg-primary-fixed-dim transition-all">+ Nạp thêm</button></div><button class="relative p-space-sm text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMYDbsqB7N_O-wBCtjrxPfwn_VIfRW7bxAb706knTvtxhhAhchCAVAjg-mXLLiRT_sh8DLN3ahx1HoiLs-H0LG1EFBjz4xqJFCnTRbOoFAiSkAqfuTr9CK8IsZ3yeJLRmLtmAOomeEP8Cd5RLCJMSIQdjOV818bXFlNNy0IdIs2mJEHwHlQHWRBn4igI3vT2aOz8n0Jc7rtn4rkaFT8KtGdI2KPUgLNs1oO6pJGQelXm0g0Jj33EerBw"/><div class="hidden md:flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold">AlexGamer#0912</span><span class="bg-secondary-container text-on-secondary-container px-1.5 py-0.2 rounded font-label-sm text-label-sm">VIP Pro</span></div><span class="font-code-sm text-code-sm text-on-surface-variant">alex.cloud@nexus.io</span></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Orbs -->
+<div class="relative w-full overflow-hidden px-space-lg py-space-lg flex flex-col gap-space-xl">
+<div class="pointer-events-none absolute -top-40 -left-20 w-96 h-96 rounded-full bg-primary-container/10 blur-[130px]"></div>
+<div class="pointer-events-none absolute top-1/3 -right-24 w-[28rem] h-[28rem] rounded-full bg-secondary-container/20 blur-[140px]"></div>
+<div class="pointer-events-none absolute bottom-10 left-1/3 w-80 h-80 rounded-full bg-tertiary-container/10 blur-[120px]"></div>
+<!-- 1. Header & Quick Balance Section -->
+<section class="relative flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="flex flex-col max-w-3xl">
+<!-- Breadcrumb & Overline -->
+<div class="flex items-center gap-space-sm font-code-sm text-code-sm text-on-surface-variant mb-space-xs">
+<span class="hover:text-primary transition-colors cursor-pointer">Trang chủ</span>
+<span class="text-outline">/</span>
+<span class="text-primary-container font-semibold">Thuê Server</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-tertiary-fixed text-label-sm font-label-sm ml-space-sm">NVMe Gen4 Active</span>
+</div>
+<h1 class="font-display-lg text-display-lg tracking-tight text-primary mt-1">
+          Bảng giá &amp; Thuê Máy Chủ Game Đám Mây
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs max-w-2xl">
+          Hạ tầng NVMe Gen4 hiệu năng đỉnh cao, kích hoạt tự động sau 30 giây với bảo vệ Anti-DDoS Game Chuyên Dụng tới 2.4 Tbps.
+        </p>
+</div>
+<!-- Quick Balance Indicator Card -->
+<div class="flex items-center gap-space-md bg-surface-container-low/80 backdrop-blur-xl p-space-md rounded-xl shadow-xl">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shadow-md">
+<span class="material-symbols-outlined text-[26px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-sm text-code-sm text-outline">Số dư khả dụng</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">250.000</span>
+<span class="font-code-sm text-code-sm text-primary-fixed-dim font-semibold">VNĐ</span>
+</div>
+</div>
+<button class="ml-space-sm px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary-fixed-dim transition-all shadow-[0_0_16px_rgba(0,240,255,0.25)] flex items-center gap-1.5 cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">add_card</span>
+<span>Nạp thêm tiền</span>
+</button>
+</div>
+</section>
+<!-- 2. Game Tabs & Billing Switcher Banner -->
+<section class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md bg-surface-container-lowest/80 backdrop-blur-xl p-space-md rounded-xl shadow-md">
+<!-- Game Selector Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 lg:pb-0" id="game-selector-group">
+<!-- Minecraft (Active) -->
+<button class="game-tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-container-high text-primary-container font-label-md text-label-md transition-all shadow-sm group cursor-pointer" data-game="minecraft">
+<span class="material-symbols-outlined text-[20px] text-primary-container">deployed_code</span>
+<span class="font-semibold whitespace-nowrap">Minecraft</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_6px_#00f0ff]"></span>
+</button>
+<!-- Palworld -->
+<button class="game-tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all whitespace-nowrap cursor-pointer" data-game="palworld">
+<span class="material-symbols-outlined text-[20px]">pets</span>
+<span>Palworld</span>
+</button>
+<!-- CS2 -->
+<button class="game-tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all whitespace-nowrap cursor-pointer" data-game="cs2">
+<span class="material-symbols-outlined text-[20px]">crisis_alert</span>
+<span>Counter-Strike 2</span>
+</button>
+<!-- Rust -->
+<button class="game-tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all whitespace-nowrap cursor-pointer" data-game="rust">
+<span class="material-symbols-outlined text-[20px]">construction</span>
+<span>Rust</span>
+</button>
+<!-- FiveM / GTA V -->
+<button class="game-tab-btn flex items-center gap-space-sm px-space-md py-space-sm rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all whitespace-nowrap cursor-pointer" data-game="fivem">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+<span>FiveM (GTA V)</span>
+</button>
+</div>
+<!-- Billing Cycle Switcher -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="billing-btn active px-space-md py-1.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm transition-all cursor-pointer" data-cycle="1" data-discount="0">
+          1 Tháng
+        </button>
+<button class="billing-btn px-space-md py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all cursor-pointer flex items-center gap-1" data-cycle="3" data-discount="10">
+<span>3 Tháng</span>
+<span class="text-tertiary-fixed font-code-sm text-code-sm bg-tertiary-container/10 px-1 py-0.2 rounded">-10%</span>
+</button>
+<button class="billing-btn px-space-md py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all cursor-pointer flex items-center gap-1" data-cycle="6" data-discount="15">
+<span>6 Tháng</span>
+<span class="text-tertiary-fixed font-code-sm text-code-sm bg-tertiary-container/10 px-1 py-0.2 rounded">-15%</span>
+</button>
+<button class="billing-btn px-space-md py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all cursor-pointer flex items-center gap-1" data-cycle="12" data-discount="25">
+<span>1 Năm</span>
+<span class="text-primary-container font-code-sm text-code-sm bg-primary-container/20 px-1 py-0.2 rounded">-25% + Free DB</span>
+</button>
+</div>
+</section>
+<!-- 3. Pricing Cards Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg items-stretch">
+<!-- Tier 1: STARTER NODE -->
+<div class="plan-card flex flex-col justify-between bg-surface-container-low/70 backdrop-blur-xl p-space-lg rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 relative group" data-base-price="59000" data-plan-id="starter">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-space-sm mb-space-sm">
+<span class="font-code-sm text-code-sm text-surface-tint uppercase tracking-wider font-semibold">Cấp Nhập Môn</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm">5-10 Slots</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">STARTER NODE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Lý tưởng cho nhóm bạn sinh tồn nhỏ và máy chủ Vanilla tiêu chuẩn.</p>
+<!-- Price Display -->
+<div class="mt-space-lg mb-space-lg flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-primary font-extrabold tracking-tight plan-price" data-raw="59000">59.000</span>
+<span class="font-code-sm text-code-sm text-outline">VNĐ / tháng</span>
+</div>
+<!-- Specs List -->
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">memory</span>
+<span><strong>2 vCPU</strong> Intel Core i9-14900K (5.4GHz)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">speed</span>
+<span><strong>4 GB</strong> High-speed DDR5 5600MHz</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">storage</span>
+<span><strong>30 GB</strong> NVMe M.2 Gen4 Read 7000MB/s</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">all_inclusive</span>
+<span>Băng thông không giới hạn 1Gbps Port</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">database</span>
+<span><strong>1 MySQL Database</strong> kèm phpMyAdmin</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">shield</span>
+<span>Anti-DDoS Game Layer 7 (2.4 Tbps)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-xl pt-space-md flex flex-col gap-space-sm">
+<button class="select-plan-btn w-full py-3 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm">
+<span>Thuê gói Starter</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<span class="font-code-sm text-code-sm text-center text-outline">Kích hoạt nhanh trong ~30 giây</span>
+</div>
+</div>
+<!-- Tier 2: PRO GAMER CLUSTER (Popular - Emphasized Neon) -->
+<div class="plan-card flex flex-col justify-between bg-surface-container/90 backdrop-blur-xl p-space-lg rounded-xl shadow-2xl relative group transform lg:-translate-y-2 shadow-[0_0_35px_rgba(0,240,255,0.12)]" data-base-price="149000" data-plan-id="pro">
+<!-- Recommended Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-space-md py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold tracking-wider uppercase flex items-center gap-1.5 shadow-[0_0_16px_rgba(0,240,255,0.6)]">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+<span>Khuyên Dùng / Popular</span>
+</div>
+<div class="flex flex-col pt-1">
+<div class="flex items-center justify-between gap-space-sm mb-space-sm">
+<span class="font-code-sm text-code-sm text-primary-fixed font-semibold tracking-wider uppercase">Khuyên Dùng Cộng Đồng</span>
+<span class="px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary-fixed-dim font-code-sm text-code-sm font-semibold">25-50 Slots</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">PRO GAMER CLUSTER</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Cấu hình chuẩn thi đấu Esports, hỗ trợ modpack nặng, plugin tự chọn mượt mà.</p>
+<!-- Price Display -->
+<div class="mt-space-lg mb-space-lg flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-primary-container font-extrabold tracking-tight plan-price" data-raw="149000">149.000</span>
+<span class="font-code-sm text-code-sm text-outline">VNĐ / tháng</span>
+</div>
+<!-- Specs List -->
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">memory</span>
+<span><strong>4 vCPU</strong> AMD Ryzen 9 7950X (5.7GHz Max)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">speed</span>
+<span><strong>8 GB</strong> DDR5 6000MHz ECC Register</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">storage</span>
+<span><strong>80 GB</strong> NVMe Gen4 Enterprise (IOPS 850k)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">database</span>
+<span><strong>3 CSDL MySQL</strong> riêng biệt tốc độ cao</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">terminal</span>
+<span>RCON Console thời gian thực + File Web Manager</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">backup</span>
+<span>Tự động sao lưu (Auto Daily Backups) Cloud</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary-container">extension</span>
+<span>Trình cài đặt Modpack &amp; Plugin 1-Click</span>
+</div>
+</div>
+</div>
+<div class="mt-space-xl pt-space-md flex flex-col gap-space-sm">
+<button class="select-plan-btn w-full py-3.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold hover:bg-primary-fixed-dim transition-all flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_20px_rgba(0,240,255,0.4)]">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Thuê ngay - Kích hoạt tức thì</span>
+</button>
+<span class="font-code-sm text-code-sm text-center text-primary-fixed-dim">Miễn phí hoàn tất cấu hình Subdomain DNS</span>
+</div>
+</div>
+<!-- Tier 3: ENTERPRISE BEAST -->
+<div class="plan-card flex flex-col justify-between bg-surface-container-low/70 backdrop-blur-xl p-space-lg rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 relative group" data-base-price="299000" data-plan-id="enterprise">
+<div class="flex flex-col">
+<div class="flex items-center justify-between gap-space-sm mb-space-sm">
+<span class="font-code-sm text-code-sm text-secondary-fixed font-semibold uppercase tracking-wider">Hạ Tầng Cực Đại</span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container/30 text-secondary-fixed font-code-sm text-code-sm">100+ Slots SMP</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">ENTERPRISE BEAST</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Dành cho cộng đồng lớn quy mô đa server kết nối BungeeCord / Velocity.</p>
+<!-- Price Display -->
+<div class="mt-space-lg mb-space-lg flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg text-primary font-extrabold tracking-tight plan-price" data-raw="299000">299.000</span>
+<span class="font-code-sm text-code-sm text-outline">VNĐ / tháng</span>
+</div>
+<!-- Specs List -->
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">memory</span>
+<span><strong>8 vCPU</strong> AMD Ryzen 9 7950X Overclocked 5.7GHz</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">speed</span>
+<span><strong>16 GB</strong> DDR5 Quad-Channel Ultra-Low Latency</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">storage</span>
+<span><strong>160 GB</strong> NVMe Gen4 Enterprise RAID 10</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">hub</span>
+<span>Cổng mặc định Dedicated Port (Không kèm port phụ)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">database</span>
+<span><strong>Không giới hạn CSDL MySQL</strong> &amp; Redis Cache</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">verified_user</span>
+<span>Cam kết SLA 99.99% &amp; Hỗ trợ VIP 24/7 trực tiếp qua Discord</span>
+</div>
+</div>
+</div>
+<div class="mt-space-xl pt-space-md flex flex-col gap-space-sm">
+<button class="select-plan-btn w-full py-3 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm">
+<span>Thuê gói Enterprise</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<span class="font-code-sm text-code-sm text-center text-outline">Chuyển dữ liệu máy chủ cũ miễn phí 100%</span>
+</div>
+</div>
+</section>
+<!-- 4. Custom Configuration & Checkout Summary Block -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Configurator (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-xl shadow-xl">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px] text-primary-container">tune</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Tùy biến Cấu hình Máy chủ</h2>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Bước 2 / 2</span>
+</div>
+<!-- 4.1 Datacenter Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Chọn Vị trí Datacenter</span>
+<span class="font-code-sm text-code-sm text-surface-tint">Độ trễ thấp nhất</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm" id="dc-selector-group">
+<!-- Hanoi -->
+<button class="dc-card active flex flex-col p-space-md rounded-lg bg-surface-container-high text-left transition-all cursor-pointer relative shadow-sm" data-dc="VN-HN-01" data-ping="12ms">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Hà Nội (VN)</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed shadow-[0_0_6px_#6ffbbe]"></span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary-fixed font-medium mt-1">12ms Ping</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Viettel IDC Pháp Vân</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.2 rounded bg-primary-container/20 text-primary-fixed-dim font-code-sm text-code-sm">Đề xuất</span>
+</button>
+<!-- HCMC -->
+<button class="dc-card flex flex-col p-space-md rounded-lg bg-surface-container text-left hover:bg-surface-container-high transition-all cursor-pointer" data-dc="VN-HCM-02" data-ping="15ms">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Hồ Chí Minh</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary-fixed font-medium mt-1">15ms Ping</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">VNPT IDC Tân Bình</span>
+</button>
+<!-- Singapore -->
+<button class="dc-card flex flex-col p-space-md rounded-lg bg-surface-container text-left hover:bg-surface-container-high transition-all cursor-pointer" data-dc="SG-SIN-01" data-ping="28ms">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Singapore</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary-fixed font-medium mt-1">28ms Ping</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Equinix SG3 Global</span>
+</button>
+</div>
+</div>
+<!-- 4.2 Server Hostname & Software Version -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="server-name-input">Tên máy chủ dự kiến</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">dns</span>
+<input class="w-full pl-10 pr-space-md py-2.5 bg-surface-container rounded-lg text-on-surface font-code-sm text-code-sm focus:outline-none focus:bg-surface-container-high transition-all" id="server-name-input" placeholder="Ví dụ: MyServer-SMP-2025" type="text" value="Nexus-SMP-Survival"/>
+</div>
+<span class="font-code-sm text-code-sm text-outline">Địa chỉ kết nối phụ: .nexuscloud.vn</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="server-version-select">Phiên bản / Core cài sẵn</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">code_blocks</span>
+<select class="w-full pl-10 pr-space-md py-2.5 bg-surface-container rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-all appearance-none cursor-pointer" id="server-version-select">
+<option value="PaperMC 1.20.4">PaperMC 1.20.4 (Tối ưu hóa TPS cao)</option>
+<option value="Purpur 1.20.4">Purpur 1.20.4 (Độ tùy biến sâu)</option>
+<option value="Forge 1.20.1">Forge 1.20.1 (Hỗ trợ Modpack)</option>
+<option value="Fabric 1.20.4">Fabric 1.20.4 (Siêu nhẹ &amp; Hiện đại)</option>
+<option value="Vanilla 1.20.4">Vanilla Minecraft Chính Thức</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">Có thể thay đổi phiên bản bất kỳ lúc nào trong RCON Console</span>
+</div>
+</div>
+<!-- 4.3 Visual Hardware Spec Teletype -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col gap-space-sm shadow-inner">
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+              Thông số Cluster tự động gán
+            </span>
+<span class="text-tertiary-fixed font-semibold">Docker Pterodactyl Container Engine</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-1">
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">vCPU Priority</span>
+<span class="font-code-md text-code-md text-primary font-semibold" id="tele-cpu">4 vCPU (High)</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">RAM Allocation</span>
+<span class="font-code-md text-code-md text-primary font-semibold" id="tele-ram">8.00 GB DDR5</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">NVMe Gen4</span>
+<span class="font-code-md text-code-md text-primary font-semibold" id="tele-disk">80 GB Space</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col">
+<span class="font-code-sm text-code-sm text-outline">Anti-DDoS</span>
+<span class="font-code-md text-code-md text-tertiary font-semibold">2.4 Tbps Game</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Order Summary & Instant Checkout Drawer (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col bg-surface-container-low/90 backdrop-blur-2xl p-space-lg rounded-xl shadow-2xl relative">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px] text-tertiary-fixed">receipt_long</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Tóm tắt Đơn hàng</h2>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-container/15 text-tertiary-fixed font-code-sm text-code-sm font-semibold">Ready to Deploy</span>
+</div>
+<!-- Line Items -->
+<div class="flex flex-col gap-space-md py-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold" id="summary-plan-title">Pro Gamer Cluster (8GB RAM)</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant" id="summary-game-title">Game: Minecraft (PaperMC)</span>
+</div>
+<span class="font-code-md text-code-md text-primary font-semibold" id="summary-plan-price">149.000đ</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chu kỳ thanh toán</span>
+<span class="font-code-sm text-code-sm text-outline" id="summary-cycle-text">1 Tháng (Gia hạn hàng tháng)</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface font-medium" id="summary-cycle-calc">1x</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Vị trí máy chủ</span>
+<span class="font-code-sm text-code-sm text-outline" id="summary-location-text">Datacenter Hà Nội (VN-HN-01)</span>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary-fixed font-semibold">Miễn phí setup</span>
+</div>
+<!-- Voucher Promo Code -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<label class="font-label-sm text-label-sm text-outline">Mã khuyến mãi / Voucher</label>
+<div class="flex gap-space-sm">
+<input class="flex-1 px-space-md py-2 bg-surface-container rounded-lg text-primary font-code-sm text-code-sm uppercase focus:outline-none focus:bg-surface-container-high transition-all" id="coupon-input" placeholder="Nhập mã voucher..." type="text" value="GAMER2025"/>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm font-semibold transition-all cursor-pointer" id="apply-coupon-btn">
+                Áp dụng
+              </button>
+</div>
+<div class="flex items-center justify-between pt-1" id="voucher-status-line">
+<span class="font-code-sm text-code-sm text-tertiary-fixed flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Voucher GAMER2025 được áp dụng
+              </span>
+<span class="font-code-sm text-code-sm text-tertiary-fixed font-semibold" id="voucher-discount-val">-20.000đ</span>
+</div>
+</div>
+</div>
+<!-- Price Breakdown Table -->
+<div class="pt-space-md flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded-xl">
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Tạm tính</span>
+<span class="font-code-sm text-code-sm text-on-surface" id="subtotal-val">149.000đ</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Chiết khấu Voucher</span>
+<span class="font-code-sm text-code-sm text-tertiary-fixed" id="discount-val">-20.000đ</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Thuế &amp; Phí bảo vệ DDoS</span>
+<span class="font-code-sm text-code-sm text-primary-fixed-dim">0đ (Đã bao gồm)</span>
+</div>
+<div class="pt-space-sm mt-space-xs flex justify-between items-baseline">
+<span class="font-headline-md text-headline-md text-primary font-bold">Tổng thanh toán:</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-xl text-headline-xl text-primary-container font-extrabold" id="final-total-val">129.000</span>
+<span class="font-code-sm text-code-sm text-primary-container font-semibold">VNĐ</span>
+</div>
+</div>
+</div>
+<!-- Wallet Deduct Telemetry -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Trừ trực tiếp số dư ví</span>
+<span class="font-code-sm text-code-sm text-outline">Số dư còn lại: <span class="text-tertiary-fixed font-semibold" id="wallet-remainder-val">121.000đ</span></span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary-fixed font-semibold bg-tertiary-container/10 px-2 py-0.5 rounded">Đủ số dư</span>
+</div>
+<!-- Terms Agreement -->
+<div class="mt-space-md flex items-start gap-space-sm">
+<input checked="" class="mt-1 w-4 h-4 rounded bg-surface-container text-primary-container focus:ring-0 focus:outline-none cursor-pointer" id="tos-checkbox" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer select-none" for="tos-checkbox">
+            Tôi đồng ý với <a class="text-primary-container underline hover:text-primary" href="#">Điều khoản dịch vụ</a> và chính sách hoàn tiền trong 72h nếu không hài lòng vì giật lag.
+          </label>
+</div>
+<!-- Big CTA Button -->
+<button class="mt-space-lg w-full py-4 rounded-xl bg-primary-container text-on-primary-container font-headline-md text-headline-md font-bold hover:bg-primary-fixed-dim transition-all duration-200 flex items-center justify-center gap-space-sm shadow-[0_0_28px_rgba(0,240,255,0.45)] cursor-pointer group" id="checkout-submit-btn">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">rocket_launch</span>
+<span>Xác Nhận Thanh Toán &amp; Khởi Tạo Server</span>
+</button>
+<!-- Trust Badges Under Checkout -->
+<div class="mt-space-md flex items-center justify-center gap-space-md text-outline font-code-sm text-code-sm text-center">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">verified</span>
+            Khởi tạo tức thì trong 30s
+          </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">refresh</span>
+            Hoàn tiền 100% trong 3 ngày
+          </span>
+</div>
+</div>
+</section>
+<!-- 5. Feature Highlights & Infrastructure Guarantees -->
+<section class="flex flex-col gap-space-lg pt-space-md">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto">
+<span class="font-code-sm text-code-sm text-surface-tint uppercase tracking-widest font-semibold">Nexus Core Architecture</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-bold mt-1">Hạ Tầng Điện Toán Đám Mây Chuyên Biệt Cho Game</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+          Mỗi server được phân bổ tài nguyên vCPU độc lập, không oversell, bảo toàn xung nhịp tối đa đảm bảo TPS luôn chạm mốc 20.0 ổn định.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Feature 1 -->
+<div class="bg-surface-container-low/70 backdrop-blur-xl p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container-low transition-all">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[26px]">network_check</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary font-semibold">99.98% Uptime Cam Kết</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Đảm bảo kết nối liền mạch qua hệ thống đường truyền đa mạng VNPT, Viettel, FPT kết nối trực tiếp các tuyến cáp quang quốc tế APG và AAE-1.
+          </p>
+<div class="mt-auto pt-space-xs flex items-center gap-1 font-code-sm text-code-sm text-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]">done_all</span>
+<span>SLA Hoàn phí tự động</span>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-low/70 backdrop-blur-xl p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container-low transition-all">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">security</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary font-semibold">Anti-DDoS Game Layer 7</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Bộ lọc phần cứng CosmicShield thanh lọc các cuộc tấn công UDP Flood, SYN Flood, Null Ping và bảo vệ RCON console không bao giờ bị nghẽn mạng.
+          </p>
+<div class="mt-auto pt-space-xs flex items-center gap-1 font-code-sm text-code-sm text-primary-container">
+<span class="material-symbols-outlined text-[16px]">flash_on</span>
+<span>2.4 Tbps Mitigation</span>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-low/70 backdrop-blur-xl p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container-low transition-all">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-[26px]">speed</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary font-semibold">NVMe Gen4 7000 MB/s</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Tải chunk bản đồ siêu tốc, khởi động lại server chỉ mất 12 giây nhờ ổ cứng Samsung PM9A3 Enterprise NVMe thế hệ thứ 4 nhanh gấp 14 lần SSD SATA.
+          </p>
+<div class="mt-auto pt-space-xs flex items-center gap-1 font-code-sm text-code-sm text-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">memory</span>
+<span>IOPS 850,000+</span>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container-low/70 backdrop-blur-xl p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container-low transition-all">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-surface-tint">
+<span class="material-symbols-outlined text-[26px]">apps</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-primary font-semibold">Cài Đặt Mod/Plugin 1-Click</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Kho thư viện hơn 10.000 plugin Spigot, Paper và các Modpack lớn (RLCraft, All The Mods, Pixelmon) tải xuống trực tiếp chỉ với một nút bấm.
+          </p>
+<div class="mt-auto pt-space-xs flex items-center gap-1 font-code-sm text-code-sm text-surface-tint">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>Tự động cập nhật bản vá</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Interactive Logic for Pricing, Datacenter, Game Selection, and Cart Calculation -->
+<script>
+    (function() {
+      // Internal State
+      const state = {
+        game: 'minecraft',
+        gameLabel: 'Minecraft (PaperMC)',
+        billingCycleMonths: 1,
+        billingDiscountPercent: 0,
+        selectedPlan: 'pro',
+        planBasePrice: 149000,
+        planTitle: 'Pro Gamer Cluster (8GB RAM)',
+        datacenter: 'VN-HN-01',
+        datacenterName: 'Datacenter Hà Nội (VN-HN-01)',
+        voucherDiscount: 20000,
+        walletBalance: 250000
+      };
+
+      const planSpecs = {
+        starter: {
+          title: 'Starter Node (4GB RAM)',
+          price: 59000,
+          cpu: '2 vCPU i9-14900K',
+          ram: '4.00 GB DDR5',
+          disk: '30 GB NVMe'
+        },
+        pro: {
+          title: 'Pro Gamer Cluster (8GB RAM)',
+          price: 149000,
+          cpu: '4 vCPU Ryzen 9 7950X',
+          ram: '8.00 GB DDR5',
+          disk: '80 GB NVMe'
+        },
+        enterprise: {
+          title: 'Enterprise Beast (16GB RAM)',
+          price: 299000,
+          cpu: '8 vCPU Ryzen 9 7950X',
+          ram: '16.00 GB DDR5',
+          disk: '160 GB NVMe'
+        }
+      };
+
+      const gameNames = {
+        minecraft: 'Minecraft (PaperMC)',
+        palworld: 'Palworld (Dedicated Engine)',
+        cs2: 'Counter-Strike 2 (128 Tickrate)',
+        rust: 'Rust (Oxide / Carbon Support)',
+        fivem: 'FiveM (GTA V ESX / QBCore)'
+      };
+
+      function formatVND(amount) {
+        return new Intl.NumberFormat('vi-VN').format(Math.max(0, amount)) + 'đ';
+      }
+
+      function updateCalculation() {
+        const months = state.billingCycleMonths;
+        const discountRate = state.billingDiscountPercent / 100;
+        const baseSubtotal = (state.planBasePrice * months);
+        const cycleDiscount = Math.round(baseSubtotal * discountRate);
+        const subtotalAfterCycle = baseSubtotal - cycleDiscount;
+        const finalTotal = Math.max(0, subtotalAfterCycle - state.voucherDiscount);
+        const remainder = state.walletBalance - finalTotal;
+
+        // Update DOM displays
+        document.getElementById('summary-plan-title').textContent = state.planTitle;
+        document.getElementById('summary-game-title').textContent = 'Game: ' + state.gameLabel;
+        document.getElementById('summary-plan-price').textContent = formatVND(state.planBasePrice);
+
+        document.getElementById('summary-cycle-text').textContent = months + ' Tháng ' + (state.billingDiscountPercent > 0 ? '(Giảm ' + state.billingDiscountPercent + '%)' : '');
+        document.getElementById('summary-cycle-calc').textContent = months + 'x kỳ';
+        document.getElementById('summary-location-text').textContent = state.datacenterName;
+
+        document.getElementById('subtotal-val').textContent = formatVND(subtotalAfterCycle);
+        document.getElementById('discount-val').textContent = state.voucherDiscount > 0 ? '-' + formatVND(state.voucherDiscount) : '0đ';
+        document.getElementById('final-total-val').textContent = new Intl.NumberFormat('vi-VN').format(finalTotal);
+
+        const remainderEl = document.getElementById('wallet-remainder-val');
+        if (remainder >= 0) {
+          remainderEl.textContent = formatVND(remainder);
+          remainderEl.className = 'text-tertiary-fixed font-semibold';
+        } else {
+          remainderEl.textContent = 'Thiếu ' + formatVND(Math.abs(remainder));
+          remainderEl.className = 'text-error font-semibold';
+        }
+
+        // Telemetry Spec block update
+        const specs = planSpecs[state.selectedPlan];
+        if (specs) {
+          document.getElementById('tele-cpu').textContent = specs.cpu;
+          document.getElementById('tele-ram').textContent = specs.ram;
+          document.getElementById('tele-disk').textContent = specs.disk;
+        }
+      }
+
+      // Game Tabs Switching
+      const gameButtons = document.querySelectorAll('.game-tab-btn');
+      gameButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          gameButtons.forEach(b => {
+            b.classList.remove('bg-surface-container-high', 'text-primary-container', 'shadow-sm');
+            b.classList.add('text-on-surface-variant');
+            const dot = b.querySelector('.w-1\\.5');
+            if (dot) dot.remove();
+          });
+
+          this.classList.remove('text-on-surface-variant');
+          this.classList.add('bg-surface-container-high', 'text-primary-container', 'shadow-sm');
+          
+          const dot = document.createElement('span');
+          dot.className = 'w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_6px_#00f0ff]';
+          this.appendChild(dot);
+
+          const gameKey = this.getAttribute('data-game');
+          state.game = gameKey;
+          state.gameLabel = gameNames[gameKey] || gameKey;
+          updateCalculation();
+        });
+      });
+
+      // Billing Cycle Switching
+      const billingButtons = document.querySelectorAll('.billing-btn');
+      billingButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          billingButtons.forEach(b => {
+            b.classList.remove('bg-surface-container-high', 'text-primary');
+            b.classList.add('text-on-surface-variant');
+          });
+
+          this.classList.remove('text-on-surface-variant');
+          this.classList.add('bg-surface-container-high', 'text-primary');
+
+          state.billingCycleMonths = parseInt(this.getAttribute('data-cycle'), 10);
+          state.billingDiscountPercent = parseInt(this.getAttribute('data-discount'), 10);
+          updateCalculation();
+        });
+      });
+
+      // Datacenter Switching
+      const dcButtons = document.querySelectorAll('.dc-card');
+      dcButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          dcButtons.forEach(b => {
+            b.classList.remove('bg-surface-container-high');
+            b.classList.add('bg-surface-container');
+          });
+
+          this.classList.remove('bg-surface-container');
+          this.classList.add('bg-surface-container-high');
+
+          state.datacenter = this.getAttribute('data-dc');
+          const title = this.querySelector('.font-label-md').textContent;
+          state.datacenterName = 'Datacenter ' + title + ' (' + state.datacenter + ')';
+          updateCalculation();
+        });
+      });
+
+      // Plan Selection
+      const planCards = document.querySelectorAll('.plan-card');
+      planCards.forEach(card => {
+        const btn = card.querySelector('.select-plan-btn');
+        btn.addEventListener('click', function() {
+          const planId = card.getAttribute('data-plan-id');
+          state.selectedPlan = planId;
+          const planData = planSpecs[planId];
+          if (planData) {
+            state.planTitle = planData.title;
+            state.planBasePrice = planData.price;
+          }
+          updateCalculation();
+          // Visual smooth scroll down to configurator
+          document.querySelector('input#server-name-input').focus({ preventScroll: false });
+        });
+      });
+
+      // Coupon Voucher Handler
+      const couponInput = document.getElementById('coupon-input');
+      const couponBtn = document.getElementById('apply-coupon-btn');
+      couponBtn.addEventListener('click', function() {
+        const code = couponInput.value.trim().toUpperCase();
+        if (code === 'GAMER2025') {
+          state.voucherDiscount = 20000;
+          document.getElementById('voucher-status-line').classList.remove('opacity-40');
+        } else if (code === 'NEXUSVIP') {
+          state.voucherDiscount = 35000;
+          document.getElementById('voucher-discount-val').textContent = '-35.000đ';
+        } else {
+          state.voucherDiscount = 0;
+          document.getElementById('voucher-status-line').classList.add('opacity-40');
+        }
+        updateCalculation();
+      });
+
+      // Version selector dynamic sync
+      const versionSelect = document.getElementById('server-version-select');
+      versionSelect.addEventListener('change', function() {
+        state.gameLabel = state.game.toUpperCase() + ' (' + this.value + ')';
+        updateCalculation();
+      });
+
+      // Checkout Button Micro-interaction
+      const checkoutBtn = document.getElementById('checkout-submit-btn');
+      checkoutBtn.addEventListener('click', function() {
+        const originalContent = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined animate-spin text-[24px]">progress_activity</span><span>Đang xử lý trừ ví và cấp phát Pod...</span>';
+        this.disabled = true;
+
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[24px]">check_circle</span><span>Đã khởi tạo thành công! Chuyển tới Console...</span>';
+          this.classList.remove('bg-primary-container', 'text-on-primary-container');
+          this.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+          setTimeout(() => {
+            alert('Máy chủ ' + document.getElementById('server-name-input').value + ' đã được triển khai thành công tại node ' + state.datacenter + '!');
+            this.innerHTML = originalContent;
+            this.disabled = false;
+            this.classList.add('bg-primary-container', 'text-on-primary-container');
+            this.classList.remove('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+          }, 800);
+        }, 1500);
+      });
+
+      // Initialize
+      updateCalculation();
+    })();
+  </script>
+</div></main></div></body></html>

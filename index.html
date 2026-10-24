@@ -1,0 +1,637 @@
+<!DOCTYPE html><html class="dark" lang="vi"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#0a0e16","surface-tint":"#00dbe9","inverse-surface":"#dfe2ee","error-container":"#93000a","on-surface":"#dfe2ee","tertiary":"#d8ffe7","inverse-primary":"#006970","on-error":"#690005","surface-variant":"#31353e","tertiary-fixed":"#6ffbbe","secondary":"#d0bcff","outline-variant":"#3b494b","on-background":"#dfe2ee","inverse-on-surface":"#2c3039","error":"#ffb4ab","surface-container-high":"#262a33","on-secondary-container":"#c4abff","secondary-fixed-dim":"#d0bcff","secondary-fixed":"#e9ddff","surface-dim":"#0f131c","on-tertiary":"#003824","primary-container":"#00f0ff","surface-container-highest":"#31353e","on-tertiary-fixed-variant":"#005236","primary-fixed-dim":"#00dbe9","primary-fixed":"#7df4ff","on-primary-fixed":"#002022","on-error-container":"#ffdad6","on-primary-container":"#006970","surface-container-low":"#181c24","primary":"#dbfcff","on-tertiary-container":"#006d4a","on-tertiary-fixed":"#002113","surface-container":"#1c2028","on-primary-fixed-variant":"#004f54","on-secondary":"#3c0091","on-surface-variant":"#b9cacb","secondary-container":"#571bc1","on-primary":"#00363a","outline":"#849495","on-secondary-fixed":"#23005c","tertiary-fixed-dim":"#4edea3","surface":"#0f131c","surface-bright":"#353942","tertiary-container":"#65f2b5","background":"#0f131c","on-secondary-fixed-variant":"#5516be"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"2rem","margin-mobile":"1rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","space-sm":"0.5rem","gutter-mobile":"0.75rem","gutter":"1.5rem"},fontFamily:{"body-md":["Inter"],"label-md":["Inter"],"title-sm":["Inter"],"code-lg":["JetBrains Mono"],"label-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"code-sm":["JetBrains Mono"],"headline-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-xl":["Plus Jakarta Sans"],"code-md":["JetBrains Mono"],"body-sm":["Inter"]},fontSize:{"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"code-lg":["14px",{"lineHeight":"22px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"code-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-md":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm"><img alt="NexusNode Cloud Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wnx1Ne8D7AraCUMkqq5zUDlMaM9lfwUjzF9c_ZTM1Fjc7OOdzokRM533DKwky9Sho8Ina6YJH_2ldZnczeJD4pVlEpGlSNenwRQkIKZtSAosKD-acuC2SexxiYWYHUm65R5IYBOEHPh3POpDjIRh8J2VG7qvCh6U3FwQkU1q1-Y_3v8NC0NI5bgj8uYPSMa1JXUK3-sI64Jn4BE2_SdJFQOxxmRMud29d5Z3l2rg5IcKdBO0QTXLN6_WY"><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-none">NexusNode</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-tint mt-0.5">Game Hosting</span></div></div><div class="px-space-md py-space-sm"><div class="bg-surface-container-low px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-fixed-dim"></span></span><span class="font-code-sm text-code-sm text-on-surface-variant">Network Core</span></div><span class="font-code-sm text-code-sm text-tertiary-fixed font-semibold">99.98%</span></div></div><nav class="flex flex-col gap-1 px-space-md mt-space-sm" data-active-classes="bg-surface-container-high text-primary-container font-semibold shadow-[inset_0_0_12px_rgba(0,240,255,0.15)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="tong-quan" href="index.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Tổng quan</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="thue-server" href="thue-server.html"><span class="material-symbols-outlined text-[20px]">dns</span><span class="font-label-md text-label-md">Thuê Server</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="quan-ly-server" href="quan-ly-server.html"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-label-md text-label-md">Quản lý Server</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="nap-tien-vi" href="nap-tien-vi.html"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-md text-label-md">Nạp tiền &amp; Ví</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="tai-lieu-api" href="tai-lieu-api.html"><span class="material-symbols-outlined text-[20px]">code_blocks</span><span class="font-label-md text-label-md">Tài liệu &amp; API</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="cai-dat" href="cai-dat.html"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Cài đặt</span></a></nav></div><div class="p-space-md"><div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="h-2 w-2 rounded-full bg-primary-container shadow-[0_0_8px_#00f0ff]"></div><div class="flex flex-col"><span class="font-code-sm text-code-sm text-on-surface-variant">Datacenter</span><span class="font-label-sm text-label-sm text-on-surface">VN-HN-01</span></div></div><span class="font-code-sm text-code-sm text-surface-tint">12ms</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="w-full h-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-11 pr-space-md py-space-sm bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Tìm kiếm máy chủ, node IP, tài liệu..." type="text"></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span></span><span class="font-code-sm text-code-sm text-on-surface-variant">Status:</span><span class="font-code-sm text-code-sm text-tertiary font-medium">Online 99.98%</span></div><div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-xs rounded-full"><div class="flex flex-col items-end"><span class="font-code-sm text-code-sm text-outline">Số dư</span><span class="font-code-md text-code-md text-primary font-semibold">250.000đ</span></div><button class="bg-primary-container text-on-primary-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-semibold hover:bg-primary-fixed-dim transition-all">+ Nạp thêm</button></div><button class="relative p-space-sm text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden xl:flex items-center gap-1.5 mr-1"><a href="#login" class="px-2.5 py-1 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg font-label-sm text-label-sm transition-all flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">login</span><span class="">Đăng nhập</span></a><a href="#register" class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-primary rounded-lg font-label-sm text-label-sm font-semibold transition-all flex items-center gap-1 ring-1 ring-outline-variant hover:ring-primary-container"><span class="material-symbols-outlined text-[16px] text-surface-tint">person_add</span><span class="">Đăng ký</span></a></div><div class="relative group"><button type="button" class="flex items-center gap-space-sm p-1 rounded-xl hover:bg-surface-container transition-all cursor-pointer focus:outline-none" id="user-menu-button" aria-haspopup="true" aria-expanded="false"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container group-hover:ring-2 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMYDbsqB7N_O-wBCtjrxPfwn_VIfRW7bxAb706knTvtxhhAhchCAVAjg-mXLLiRT_sh8DLN3ahx1HoiLs-H0LG1EFBjz4xqJFCnTRbOoFAiSkAqfuTr9CK8IsZ3yeJLRmLtmAOomeEP8Cd5RLCJMSIQdjOV818bXFlNNy0IdIs2mJEHwHlQHWRBn4igI3vT2aOz8n0Jc7rtn4rkaFT8KtGdI2KPUgLNs1oO6pJGQelXm0g0Jj33EerBw"><div class="hidden md:flex flex-col text-left"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold">AlexGamer#0912</span><span class="bg-secondary-container text-on-secondary-container px-1.5 py-0.2 rounded font-label-sm text-label-sm">VIP Pro</span></div><span class="font-code-sm text-code-sm text-on-surface-variant">alex.cloud@nexus.io</span></div><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-transform group-hover:rotate-180 duration-200 hidden md:inline-block">expand_more</span></button><div class="absolute right-0 top-full mt-1.5 w-64 bg-surface-container-lowest/95 backdrop-blur-xl border border-outline-variant/60 rounded-xl shadow-2xl p-space-xs flex flex-col gap-1 z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200"><div class="px-space-sm py-space-xs border-b border-outline-variant/40 mb-1"><div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Tài khoản hiện tại</div><div class="font-label-md text-label-md text-primary font-semibold truncate mt-0.5">AlexGamer#0912</div><div class="font-code-sm text-code-sm text-on-surface-variant truncate">alex.cloud@nexus.io</div></div><a href="#switch-account" class="flex items-center gap-2 px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md"><span class="material-symbols-outlined text-[18px] text-surface-tint">switch_account</span><div class="flex flex-col leading-tight"><span class="">Chuyển tài khoản / Đăng nhập</span><span class="font-code-sm text-code-sm text-outline text-[11px]">Đăng nhập tài khoản khác</span></div></a><a href="#register" class="flex items-center gap-2 px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all font-label-md text-label-md"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">person_add</span><div class="flex flex-col leading-tight"><span class="">Đăng ký tài khoản mới</span><span class="font-code-sm text-code-sm text-outline text-[11px]">Tạo hồ sơ Game Hosting mới</span></div></a><div class="my-1 border-t border-outline-variant/40"></div><a href="#logout" class="flex items-center gap-2 px-space-sm py-1.5 rounded-lg text-error hover:bg-error-container/20 transition-all font-label-md text-label-md"><span class="material-symbols-outlined text-[18px]">logout</span><span class="">Đăng xuất</span></a></div></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full p-space-lg gap-space-xl">
+<!-- Floating Toast Notification for IP Copy & Status -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-sm bg-surface-container-highest px-space-md py-space-sm rounded-xl shadow-2xl" id="toast-notify">
+<span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface" id="toast-message">Sao chép địa chỉ IP thành công!</span>
+</div>
+<!-- SECTION 1: Welcome & Quick Stats Header -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg bg-surface-container-low p-space-lg rounded-xl relative overflow-hidden">
+<!-- Ambient cyan neon aura glow behind header -->
+<div class="absolute -top-12 -right-12 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 left-1/3 w-64 h-64 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs relative z-10 max-w-2xl">
+<div class="flex items-center gap-space-sm">
+<span class="bg-surface-container-high px-space-sm py-0.5 rounded-full font-code-sm text-code-sm text-surface-tint">NODE-VN-PRO</span>
+<span class="font-code-sm text-code-sm text-outline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-fixed-dim"></span>
+</span>
+<span class="font-code-sm text-code-sm text-tertiary-fixed">Datacenter Hà Nội (Ping 12ms)</span>
+</div>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight mt-1">
+        Chào mừng trở lại, AlexGamer! ⚡
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Hệ thống máy chủ của bạn đang hoạt động ổn định với độ trễ siêu thấp. Không ghi nhận sự cố gián đoạn trong 24 giờ qua.
+      </p>
+</div>
+<!-- Right Header CTA Buttons -->
+<div class="flex flex-wrap items-center gap-space-md relative z-10">
+<button class="flex items-center gap-space-sm bg-surface-container-high hover:bg-surface-variant text-on-surface px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all duration-200">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+        Console đa cụm
+      </button>
+<button class="group relative flex items-center gap-space-sm bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-headline-md text-label-md font-bold px-space-lg py-space-sm rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:rotate-90">add_circle</span>
+<span class="">Tạo Server Mới +</span>
+</button>
+</div>
+</section>
+<!-- SECTION 2: Core Metric Cards Row (4 Bento Metrics) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Wallet Balance -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-all duration-300">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tổng số dư ví</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="my-space-md">
+<div class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">250.000 <span class="font-label-md text-label-md text-surface-tint font-normal">VNĐ</span></div>
+<p class="font-code-sm text-code-sm text-outline mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">trending_flat</span>
+          Chi phí ước tính: 4.800đ / ngày
+        </p>
+</div>
+<a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container text-primary font-label-md text-label-md py-space-xs px-space-sm rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+        Nạp tiền ngay
+      </a>
+</div>
+<!-- Metric 2: Active Servers -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-all duration-300">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Máy chủ hoạt động</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+</div>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">3</span>
+<span class="font-title-sm text-title-sm text-outline">/ 5 Slot Server</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full transition-all duration-500" style="width: 60%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 2 Đang chạy</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-error"></span> 1 Dừng</span>
+<span class="text-outline">2 Trống</span>
+</div>
+</div>
+<!-- Metric 3: Allocated RAM -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-all duration-300">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tổng RAM Cấp Phát</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+</div>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary-container font-bold">10 GB</span>
+<span class="font-title-sm text-title-sm text-outline">/ 16 GB Đã mua</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 62.5%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Sử dụng thực tế: 62.5%</span>
+<span class="text-surface-tint font-medium">Còn 6 GB trống</span>
+</div>
+</div>
+<!-- Metric 4: Players Online -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-all duration-300">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Người chơi trực tuyến</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">48</span>
+<span class="font-title-sm text-title-sm text-surface-tint font-medium">Gamer Online</span>
+</div>
+<p class="font-code-sm text-code-sm text-outline mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">arrow_upward</span>
+          Cao điểm hôm nay: 76 người
+        </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary font-medium bg-tertiary-container/10 px-2 py-0.5 rounded">Tăng +24%</span>
+<span class="font-code-sm text-code-sm text-outline">so với hôm qua</span>
+</div>
+</div>
+</section>
+<!-- SECTION 3 & 4: Dual Column - Server Grid (Left 8 Cols) & Mini Telemetry Console (Right 4 Cols) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Server List (xl:col-span-8) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Filter and Tab Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0" id="filter-tabs">
+<button class="filter-btn active bg-surface-container-high text-primary-container px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all" data-filter="all">
+            Tất cả (3)
+          </button>
+<button class="filter-btn text-on-surface-variant hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all" data-filter="minecraft">
+            Minecraft (2)
+          </button>
+<button class="filter-btn text-on-surface-variant hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all" data-filter="palworld">
+            Palworld (1)
+          </button>
+<button class="filter-btn text-on-surface-variant hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs rounded-lg font-label-md text-label-md opacity-60" data-filter="cs2">
+            CS2 (0)
+          </button>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative w-44 sm:w-56">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span>
+<input class="w-full pl-8 pr- space-xs py-1.5 bg-surface-container rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary-container" id="server-search-input" placeholder="Lọc máy chủ..." type="text">
+</div>
+<button class="p-1.5 text-on-surface-variant hover:text-primary rounded-lg bg-surface-container hover:bg-surface-container-high transition-all" id="refresh-btn" onclick="refreshServersAnimation()" title="Làm mới trạng thái">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Server Cards Container -->
+<div class="flex flex-col gap-space-md" id="server-list-container">
+<!-- Server Item 1: Minecraft SMP Survival S3 (RUNNING) -->
+<article class="server-card group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-lg rounded-xl flex flex-col gap-space-md relative overflow-hidden" data-game="minecraft" data-server-id="srv-1">
+<!-- Ambient Running Glow Strip -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<!-- Server Identity & Game Cover -->
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A pixel-perfect Minecraft dirt block with vibrant green grass on top against a dark sci-fi background, high resolution 3D render, glowing cyan lighting accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0QN3FQbHFggYhAV10OAdTYLEkdAdUXcKRFsUwj6SUeQ2lgnYdxikl6GQD8X8-Is6JkH6onXSUineeOY4xfGwDEZpoPedkaGNCSD0HQ60u39o867uwbXP85MRq7wvBMED7034fED6mXwxBOHKbpuONWpYk5Vr4-ZCt8xwOSN77eugQ5MIrUeLB-wCnfA8iX4x6fcpAnxZ2qbA8HE7xrhLzTr1jwCO_Mt5rH2hW-LQ0DFk6MfxtTiLrrg">
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+                    Minecraft SMP Survival S3
+                  </h3>
+<!-- Badge Status Running -->
+<span class="inline-flex items-center gap-1.5 bg-tertiary-container/10 px-2.5 py-0.5 rounded-full font-code-sm text-code-sm text-tertiary font-semibold status-pill">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span class="status-text">ĐANG CHẠY</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Minecraft PaperMC 1.20.4 • Bungeecord Network Node</p>
+<!-- Quick IP copyable chip -->
+<div class="flex items-center gap-space-xs mt-1.5">
+<button class="inline-flex items-center gap-1.5 bg-surface-container-highest hover:bg-surface-variant px-space-sm py-1 rounded-md font-code-sm text-code-sm text-primary transition-all group/ip" onclick="copyToClipboard('mc.nexusnode.cloud:25565')" title="Click để sao chép IP">
+<span class="material-symbols-outlined text-[14px] text-surface-tint group-hover/ip:scale-110">content_copy</span>
+<span class="">mc.nexusnode.cloud:25565</span>
+</button>
+<span class="font-code-sm text-code-sm text-outline pl-1">28/50 Players</span>
+</div>
+</div>
+</div>
+<!-- Specs & Expiration Info -->
+<div class="flex md:flex-col md:items-end justify-between items-center text-right border-t md:border-t-0 pt-2 md:pt-0">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface">
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded">4 GB RAM</span>
+<span class="text-outline">/</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded">2 vCPU</span>
+<span class="text-outline">/</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded">40 GB NVMe</span>
+</div>
+<div class="mt-1 flex items-center gap-1.5 font-code-sm text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-surface-tint">calendar_today</span>
+<span class="">Còn 22 ngày</span>
+<span class="text-outline text-[11px]">(18/04/2025)</span>
+</div>
+</div>
+</div>
+<!-- Action Control Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-sm bg-surface-container-lowest/40 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl">
+<div class="flex items-center gap-space-md text-outline font-code-sm text-code-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">bolt</span> CPU: 38%</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-surface-tint">memory</span> RAM: 2.9GB</span>
+</div>
+<div class="flex items-center gap-space-sm ml-auto">
+<!-- Stop Button -->
+<button class="btn-power-stop flex items-center gap-1 bg-surface-container hover:bg-error-container hover:text-on-error text-error px-space-sm py-1.5 rounded-lg font-label-md text-label-md transition-all duration-200" onclick="toggleServerPower('srv-1', 'stop')" title="Dừng máy chủ">
+<span class="material-symbols-outlined text-[18px]">power_settings_new</span>
+<span class="hidden sm:inline">Dừng</span>
+</button>
+<!-- Restart Button -->
+<button class="btn-power-restart flex items-center gap-1 bg-surface-container hover:bg-surface-container-highest text-on-surface px-space-sm py-1.5 rounded-lg font-label-md text-label-md transition-all duration-200" onclick="toggleServerPower('srv-1', 'restart')" title="Khởi động lại máy chủ">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span class="hidden sm:inline">Restart</span>
+</button>
+<!-- Manage / Console Button -->
+<button class="flex items-center gap-1.5 bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-all duration-200">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span class="">Vào Console &amp; Quản lý</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Server Item 2: Palworld Dedicated Vietnam (RUNNING) -->
+<article class="server-card group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-lg rounded-xl flex flex-col gap-space-md relative overflow-hidden" data-game="palworld" data-server-id="srv-2">
+<!-- Ambient Running Glow Strip -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Stylized glowing creature pal from a fantasy survival game standing proudly on a high-tech obsidian pedestal, deep navy background with volumetric cyan rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGQgaH-kUS1ZBb7y2KoDh1yv0FDUWIfYgbUbkRMvU7jGuPtlWLf1YWWOouQW42ELHdF5FtGkVO6jQwmbU1sSLiVso5rNLoRGDKXN2_tqA_CyF1mQNy_4uCKRAYv_bP9nVBukC-B5WfEwYyeVwQFNc4oUIZn4nMF3zyagwCcE-2A7PrZyRSnWVNb9CgCxc-d8E10Rzvd1Cbua36-4TS6iljKtRCl70fmeb0bW-z-8erAqRPXSqRg_o2iw">
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+                    Palworld Dedicated Vietnam
+                  </h3>
+<span class="inline-flex items-center gap-1.5 bg-tertiary-container/10 px-2.5 py-0.5 rounded-full font-code-sm text-code-sm text-tertiary font-semibold status-pill">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span class="status-text">ĐANG CHẠY</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Palworld Steam v0.2.1 • High Performance Optimized</p>
+<div class="flex items-center gap-space-xs mt-1.5">
+<button class="inline-flex items-center gap-1.5 bg-surface-container-highest hover:bg-surface-variant px-space-sm py-1 rounded-md font-code-sm text-code-sm text-primary transition-all group/ip" onclick="copyToClipboard('pal.nexusnode.cloud:8211')" title="Click để sao chép IP">
+<span class="material-symbols-outlined text-[14px] text-surface-tint group-hover/ip:scale-110">content_copy</span>
+<span class="">pal.nexusnode.cloud:8211</span>
+</button>
+<span class="font-code-sm text-code-sm text-outline pl-1">20/32 Players</span>
+</div>
+</div>
+</div>
+<div class="flex md:flex-col md:items-end justify-between items-center text-right border-t md:border-t-0 pt-2 md:pt-0">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface">
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded">8 GB RAM</span>
+<span class="text-outline">/</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded">4 vCPU</span>
+<span class="text-outline">/</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded">60 GB NVMe</span>
+</div>
+<div class="mt-1 flex items-center gap-1.5 font-code-sm text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-surface-tint">calendar_today</span>
+<span class="">Còn 15 ngày</span>
+<span class="text-outline text-[11px]">(11/04/2025)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-sm bg-surface-container-lowest/40 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl">
+<div class="flex items-center gap-space-md text-outline font-code-sm text-code-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">bolt</span> CPU: 64%</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-surface-tint">memory</span> RAM: 5.6GB</span>
+</div>
+<div class="flex items-center gap-space-sm ml-auto">
+<button class="btn-power-stop flex items-center gap-1 bg-surface-container hover:bg-error-container hover:text-on-error text-error px-space-sm py-1.5 rounded-lg font-label-md text-label-md transition-all duration-200" onclick="toggleServerPower('srv-2', 'stop')" title="Dừng máy chủ">
+<span class="material-symbols-outlined text-[18px]">power_settings_new</span>
+<span class="hidden sm:inline">Dừng</span>
+</button>
+<button class="btn-power-restart flex items-center gap-1 bg-surface-container hover:bg-surface-container-highest text-on-surface px-space-sm py-1.5 rounded-lg font-label-md text-label-md transition-all duration-200" onclick="toggleServerPower('srv-2', 'restart')" title="Khởi động lại máy chủ">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span class="hidden sm:inline">Restart</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-all duration-200">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span class="">Vào Console &amp; Quản lý</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Server Item 3: Vanilla Minigames Lobby (OFFLINE & EXPIRING SOON) -->
+<article class="server-card group bg-surface-container-low hover:bg-surface-container transition-all duration-300 p-space-lg rounded-xl flex flex-col gap-space-md relative overflow-hidden opacity-90" data-game="minecraft" data-server-id="srv-3">
+<!-- Ambient Stopped Alert Glow Strip -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 overflow-hidden relative grayscale">
+<img class="w-full h-full object-cover" data-alt="Minimalist gaming portal arcade icon glowing in subtle orange and dark obsidian slate colors, clean digital artwork, game server aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPK-EJNZUZ0D9gmr5wGzGPRvA9oJk_X_mXW7JtQvynvqG-945YoIx8B0n0rY7h7xxr50nYO48XkGuOL2lKon1cuFToYDZ4Z9xurqoliU73OgRP9mglvoYwomuLsK_kdHCtp4KELhiH_7bvIyzOpYKDqXSzCzUCjwOBji7eXgdzD6IeMYXvY9Ii-nebe8OX9mZgKscd_7LKw9UjyoqZlls9O53tfZ3OhAuT5ppo4vLflz6LQ5-d-Fl54A">
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+                    Vanilla Minigames Lobby
+                  </h3>
+<span class="inline-flex items-center gap-1.5 bg-error-container/20 px-2.5 py-0.5 rounded-full font-code-sm text-code-sm text-error font-semibold status-pill">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="status-text">ĐÃ DỪNG</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Minecraft Fabric 1.20.2 • Standalone Hub Node</p>
+<div class="flex items-center gap-space-xs mt-1.5">
+<button class="inline-flex items-center gap-1.5 bg-surface-container px-space-sm py-1 rounded-md font-code-sm text-code-sm text-outline hover:text-on-surface transition-all group/ip" onclick="copyToClipboard('lobby.nexusnode.cloud:25570')" title="Click để sao chép IP">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span class="">lobby.nexusnode.cloud:25570</span>
+</button>
+<span class="font-code-sm text-code-sm text-outline pl-1">0/20 Players</span>
+</div>
+</div>
+</div>
+<div class="flex md:flex-col md:items-end justify-between items-center text-right border-t md:border-t-0 pt-2 md:pt-0">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface">
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded">2 GB RAM</span>
+<span class="text-outline">/</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded">1 vCPU</span>
+<span class="text-outline">/</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded">20 GB NVMe</span>
+</div>
+<!-- Expiring Warning Badge -->
+<div class="mt-1 flex items-center gap-1.5 font-code-sm text-code-sm text-error font-medium bg-error-container/20 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[15px]">warning</span>
+<span class="">Còn 3 ngày (29/03/2025)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-sm bg-surface-container-lowest/40 -mx-space-lg -mb-space-lg p-space-md rounded-b-xl">
+<div class="flex items-center gap-space-md text-outline font-code-sm text-code-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-outline">power_off</span> Máy chủ ngoại tuyến</span>
+</div>
+<div class="flex items-center gap-space-sm ml-auto">
+<!-- Start Button (Bright Green Accent) -->
+<button class="btn-power-start flex items-center gap-1 bg-tertiary-container hover:bg-tertiary-fixed text-on-tertiary-container px-space-md py-1.5 rounded-lg font-label-md text-label-md font-semibold transition-all duration-200" onclick="toggleServerPower('srv-3', 'start')">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span class="">Khởi động</span>
+</button>
+<!-- Gia hạn Button -->
+<button class="flex items-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface px-space-sm py-1.5 rounded-lg font-label-md text-label-md transition-all duration-200">
+<span class="material-symbols-outlined text-[18px] text-surface-tint">autorenew</span>
+<span class="">Gia hạn gói</span>
+</button>
+<!-- Manage Button -->
+<button class="flex items-center gap-1.5 bg-surface-container-high hover:bg-surface-variant text-on-surface px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-all duration-200">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+<span class="">Cấu hình</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- RIGHT COLUMN: Quick Server Control & Telemetry Widget (xl:col-span-4) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Telemetry Card (Live Hardware Node) -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-primary-container animate-pulse shadow-sm shadow-primary-container"></div>
+<h2 class="font-title-sm text-title-sm text-on-surface font-semibold">Giám sát Node #VN-HN-01</h2>
+</div>
+<span class="font-code-sm text-code-sm text-surface-tint bg-surface-container px-2 py-0.5 rounded">Intel i9-14900K</span>
+</div>
+<!-- Telemetry Meters -->
+<div class="flex flex-col gap-space-md mt-space-xs">
+<!-- CPU Usage Meter with SVG sparkline -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">speed</span>
+                CPU Usage
+              </span>
+<span class="font-code-md text-code-md text-primary font-bold" id="telemetry-cpu-val">34.3%</span>
+</div>
+<!-- Inline Mini Sparkline Chart -->
+<div class="w-full h-9 my-1">
+<svg class="w-full h-full overflow-visible" fill="none" viewBox="0 0 200 40">
+<path class="text-primary-container" d="M0 32 L20 28 L40 35 L60 22 L80 25 L100 15 L120 20 L140 10 L160 18 L180 14 L200 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path class="text-primary-container/10" d="M0 32 L20 28 L40 35 L60 22 L80 25 L100 15 L120 20 L140 10 L160 18 L180 14 L200 24 L200 40 L0 40 Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-outline">
+<span class="">Độ trễ tick: 20.0 TPS</span>
+<span class="">Nhiệt độ: 48°C</span>
+</div>
+</div>
+<!-- RAM Meter with Progress Track -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+                RAM Allocation
+              </span>
+<span class="font-code-md text-code-md text-secondary font-bold">2.8 / 4.0 GB</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden my-1">
+<div class="bg-secondary-fixed h-full rounded-full transition-all duration-500" style="width: 70%"></div>
+</div>
+<div class="flex justify-between font-code-sm text-code-sm text-outline">
+<span class="">Heap Max: 3840 MB</span>
+<span class="text-secondary">70% Sử dụng</span>
+</div>
+</div>
+<!-- Disk I/O Meter -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">hard_drive_2</span>
+                NVMe Gen4 IOPS
+              </span>
+<span class="font-code-md text-code-md text-tertiary-fixed font-bold">14.8 MB/s</span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm text-outline mt-1">
+<span class="">Đọc: 11.2 MB/s</span>
+<span class="">•</span>
+<span class="">Ghi: 3.6 MB/s</span>
+</div>
+</div>
+</div>
+<!-- Mini Live Console Log Output -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Live Log: SMP Survival S3</span>
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span>
+</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl font-code-sm text-code-sm flex flex-col gap-1.5 h-36 overflow-y-auto" id="mini-log-terminal">
+<div class="text-outline">[14:32:01 INFO]: Preparing start region for dimension minecraft:overworld</div>
+<div class="text-tertiary-fixed">[14:32:04 INFO]: Time elapsed: 1422 ms. Server ready on port 25565!</div>
+<div class="text-primary">[14:32:15 AUTH]: Player 'DragonSlayer' connected from 14.225.2.18</div>
+<div class="text-on-surface">[14:32:16 INFO]: DragonSlayer joined the game</div>
+<div class="text-surface-tint">[14:32:20 CMD]: [AlexGamer: Set time to 06:00]</div>
+<div class="text-outline text-opacity-80" id="live-typing-log">[14:32:28 SYNC]: Saving chunk data (auto-backup: OK)</div>
+</div>
+<!-- Sticky fast command input -->
+<div class="relative mt-space-xs">
+<input class="w-full bg-surface-container px-space-md py-space-xs pr-10 rounded-lg font-code-sm text-code-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary-container" id="quick-cmd-input" placeholder="Gõ lệnh console (vd: /say, /whitelist)..." type="text">
+<button class="absolute right-1.5 top-1/2 -translate-y-1/2 p-1 text-primary-container hover:text-white rounded" onclick="sendQuickCommand()">
+<span class="material-symbols-outlined text-[18px]">subdirectory_arrow_left</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Backup & Support Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Tự động sao lưu</span>
+<span class="font-code-sm text-code-sm text-outline">Bản gần nhất: 12:00 hôm nay</span>
+</div>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-variant text-on-surface px-space-sm py-1 rounded-md font-label-sm text-label-sm transition-all">
+          Tạo bản sao lưu
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript Controller -->
+<script>
+    // Copy IP with visual toast notification
+    function copyToClipboard(text) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(showToast).catch(() => fallbackCopy(text));
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const input = document.createElement('input');
+      input.value = text;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      showToast();
+    }
+
+    function showToast(msg = "Đã sao chép địa chỉ IP vào Clipboard!") {
+      const toast = document.getElementById('toast-notify');
+      const messageElem = document.getElementById('toast-message');
+      if (messageElem) messageElem.textContent = msg;
+      
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-16', 'opacity-0');
+      }, 2500);
+    }
+
+    // Toggle Server Power State simulation (Start, Stop, Restart)
+    function toggleServerPower(serverId, action) {
+      const card = document.querySelector(`[data-server-id="${serverId}"]`);
+      if (!card) return;
+
+      const statusPill = card.querySelector('.status-pill');
+      const statusText = card.querySelector('.status-text');
+
+      if (action === 'stop') {
+        showToast(`Đang gửi tín hiệu tắt máy chủ...`);
+        statusText.textContent = "ĐANG TẮT...";
+        setTimeout(() => {
+          statusText.textContent = "ĐÃ DỪNG";
+          statusPill.className = "inline-flex items-center gap-1.5 bg-error-container/20 px-2.5 py-0.5 rounded-full font-code-sm text-code-sm text-error font-semibold status-pill";
+          showToast(`Máy chủ đã tắt an toàn!`);
+        }, 1200);
+      } else if (action === 'start') {
+        showToast(`Đang khởi động container máy chủ...`);
+        statusText.textContent = "ĐANG BOOT...";
+        setTimeout(() => {
+          statusText.textContent = "ĐANG CHẠY";
+          statusPill.className = "inline-flex items-center gap-1.5 bg-tertiary-container/10 px-2.5 py-0.5 rounded-full font-code-sm text-code-sm text-tertiary font-semibold status-pill";
+          showToast(`Máy chủ đã hoạt động bình thường!`);
+        }, 1400);
+      } else if (action === 'restart') {
+        showToast(`Đang khởi động lại node...`);
+        statusText.textContent = "REBOOTING...";
+        setTimeout(() => {
+          statusText.textContent = "ĐANG CHẠY";
+          showToast(`Khởi động lại thành công!`);
+        }, 1500);
+      }
+    }
+
+    // Tab Filtering by Game
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const serverCards = document.querySelectorAll('.server-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-surface-container-high', 'text-primary-container', 'active');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-container-high', 'text-primary-container', 'active');
+        btn.classList.remove('text-on-surface-variant');
+
+        const filter = btn.getAttribute('data-filter');
+        serverCards.forEach(card => {
+          const game = card.getAttribute('data-game');
+          if (filter === 'all' || game === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Realtime Search Filter
+    const searchInput = document.getElementById('server-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        serverCards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          card.style.display = text.includes(query) ? 'flex' : 'none';
+        });
+      });
+    }
+
+    // Refresh servers animation
+    function refreshServersAnimation() {
+      const btn = document.getElementById('refresh-btn');
+      if (btn) {
+        btn.classList.add('rotate-180', 'transition-transform', 'duration-500');
+        setTimeout(() => {
+          btn.classList.remove('rotate-180');
+          showToast("Đã đồng bộ trạng thái mới nhất từ cụm máy chủ!");
+        }, 500);
+      }
+    }
+
+    // Send Quick Console command
+    function sendQuickCommand() {
+      const input = document.getElementById('quick-cmd-input');
+      const terminal = document.getElementById('mini-log-terminal');
+      if (!input || !terminal || !input.value.trim()) return;
+
+      const cmd = input.value.trim();
+      const newEntry = document.createElement('div');
+      newEntry.className = "text-secondary font-code-sm text-code-sm";
+      newEntry.textContent = `[USER CMD]: ${cmd}`;
+      terminal.appendChild(newEntry);
+
+      input.value = '';
+      terminal.scrollTop = terminal.scrollHeight;
+
+      setTimeout(() => {
+        const resp = document.createElement('div');
+        resp.className = "text-surface-tint font-code-sm text-code-sm";
+        resp.textContent = `[EXEC RESULT]: Lệnh '${cmd}' đã thực thi thành công!`;
+        terminal.appendChild(resp);
+        terminal.scrollTop = terminal.scrollHeight;
+      }, 500);
+    }
+
+    // Interactive CPU telemetry tick simulation
+    setInterval(() => {
+      const cpuValElem = document.getElementById('telemetry-cpu-val');
+      if (cpuValElem) {
+        const randomCPU = (30 + Math.random() * 8).toFixed(1);
+        cpuValElem.textContent = `${randomCPU}%`;
+      }
+    }, 3500);
+  </script>
+</div></main></div>
+
+</body></html>

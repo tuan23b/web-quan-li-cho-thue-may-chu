@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed":"#e9ddff","on-surface":"#dfe2ee","tertiary-fixed":"#6ffbbe","tertiary":"#d8ffe7","surface-bright":"#353942","secondary":"#d0bcff","on-primary-container":"#006970","on-tertiary":"#003824","secondary-container":"#571bc1","inverse-surface":"#dfe2ee","surface":"#0f131c","on-primary-fixed":"#002022","secondary-fixed-dim":"#d0bcff","on-primary":"#00363a","on-tertiary-fixed-variant":"#005236","on-error":"#690005","primary-fixed-dim":"#00dbe9","surface-dim":"#0f131c","tertiary-fixed-dim":"#4edea3","on-secondary-fixed":"#23005c","on-secondary-container":"#c4abff","on-tertiary-container":"#006d4a","inverse-on-surface":"#2c3039","error":"#ffb4ab","surface-variant":"#31353e","inverse-primary":"#006970","surface-tint":"#00dbe9","on-secondary-fixed-variant":"#5516be","on-secondary":"#3c0091","on-tertiary-fixed":"#002113","on-background":"#dfe2ee","surface-container":"#1c2028","surface-container-high":"#262a33","on-primary-fixed-variant":"#004f54","outline-variant":"#3b494b","on-error-container":"#ffdad6","on-surface-variant":"#b9cacb","background":"#0f131c","surface-container-low":"#181c24","surface-container-highest":"#31353e","surface-container-lowest":"#0a0e16","tertiary-container":"#65f2b5","primary-fixed":"#7df4ff","error-container":"#93000a","primary":"#dbfcff","primary-container":"#00f0ff","outline":"#849495"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-sm":"0.5rem","space-xs":"0.25rem","margin-mobile":"1rem","space-md":"1rem","gutter-mobile":"0.75rem","gutter":"1.5rem","space-lg":"1.5rem","margin":"2rem","space-xl":"2.5rem"},fontFamily:{"code-sm":["JetBrains Mono"],"headline-lg":["Plus Jakarta Sans"],"title-sm":["Inter"],"code-md":["JetBrains Mono"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],"body-md":["Inter"],"display-lg":["Plus Jakarta Sans"],"label-md":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"code-lg":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"]},fontSize:{"code-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"code-md":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"code-lg":["14px",{"lineHeight":"22px","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm"><img alt="NexusNode Cloud Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wnx1Ne8D7AraCUMkqq5zUDlMaM9lfwUjzF9c_ZTM1Fjc7OOdzokRM533DKwky9Sho8Ina6YJH_2ldZnczeJD4pVlEpGlSNenwRQkIKZtSAosKD-acuC2SexxiYWYHUm65R5IYBOEHPh3POpDjIRh8J2VG7qvCh6U3FwQkU1q1-Y_3v8NC0NI5bgj8uYPSMa1JXUK3-sI64Jn4BE2_SdJFQOxxmRMud29d5Z3l2rg5IcKdBO0QTXLN6_WY"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-none">NexusNode</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-tint mt-0.5">Game Hosting</span></div></div><div class="px-space-md py-space-sm"><div class="bg-surface-container-low px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-fixed-dim"></span></span><span class="font-code-sm text-code-sm text-on-surface-variant">Network Core</span></div><span class="font-code-sm text-code-sm text-tertiary-fixed font-semibold">99.98%</span></div></div><nav class="flex flex-col gap-1 px-space-md mt-space-sm" data-active-classes="bg-surface-container-high text-primary-container font-semibold shadow-[inset_0_0_12px_rgba(0,240,255,0.15)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200 font-label-md text-label-md" data-path="tong-quan" href="index.html">Tổng quan</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200 font-label-md text-label-md" data-path="thue-server" href="thue-server.html">Thuê Server</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200 font-label-md text-label-md" data-path="quan-ly-server" href="quan-ly-server.html">Quản lý Server</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200 font-label-md text-label-md" data-path="nap-tien-vi" href="nap-tien-vi.html">Nạp tiền &amp; Ví</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200 font-label-md text-label-md" data-path="ho-tro-ticket" href="#">Hỗ trợ &amp; Ticket</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200 font-label-md text-label-md" data-path="tai-lieu-api" href="tai-lieu-api.html">Tài liệu &amp; API</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200 font-label-md text-label-md" data-path="cai-dat" href="cai-dat.html">Cài đặt</a></nav></div><div class="p-space-md"><div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="h-2 w-2 rounded-full bg-primary-container shadow-[0_0_8px_#00f0ff]"></div><div class="flex flex-col"><span class="font-code-sm text-code-sm text-on-surface-variant">Datacenter</span><span class="font-label-sm text-label-sm text-on-surface">VN-HN-01</span></div></div><span class="font-code-sm text-code-sm text-surface-tint">12ms</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="w-full h-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-11 pr-space-md py-space-sm bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Tìm kiếm máy chủ, node IP, tài liệu..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span></span><span class="font-code-sm text-code-sm text-on-surface-variant">Status:</span><span class="font-code-sm text-code-sm text-tertiary font-medium">Online 99.98%</span></div><div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-xs rounded-full"><div class="flex flex-col items-end"><span class="font-code-sm text-code-sm text-outline">Số dư</span><span class="font-code-md text-code-md text-primary font-semibold">250.000đ</span></div><button class="bg-primary-container text-on-primary-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-semibold hover:bg-primary-fixed-dim transition-all">+ Nạp thêm</button></div><button class="relative p-space-sm text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMYDbsqB7N_O-wBCtjrxPfwn_VIfRW7bxAb706knTvtxhhAhchCAVAjg-mXLLiRT_sh8DLN3ahx1HoiLs-H0LG1EFBjz4xqJFCnTRbOoFAiSkAqfuTr9CK8IsZ3yeJLRmLtmAOomeEP8Cd5RLCJMSIQdjOV818bXFlNNy0IdIs2mJEHwHlQHWRBn4igI3vT2aOz8n0Jc7rtn4rkaFT8KtGdI2KPUgLNs1oO6pJGQelXm0g0Jj33EerBw"/><div class="hidden md:flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold">AlexGamer0912</span><span class="bg-secondary-container text-on-secondary-container px-1.5 py-0.2 rounded font-label-sm text-label-sm">VIP Pro</span></div><span class="font-code-sm text-code-sm text-on-surface-variant">alex.cloud@nexus.io</span></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Command Ribbon & Header Context -->
+<div class="px-space-lg py-space-md bg-surface-container-lowest/40 backdrop-blur-md">
+<!-- Breadcrumbs & Meta Badges -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-sm">
+<nav class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Trang chủ</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Tài khoản</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Cài đặt</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary-container font-medium">Phiên đăng nhập &amp; Thiết bị</span>
+</nav>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container text-tertiary-fixed font-code-sm text-code-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container">lock</span>
+<span>TLS 1.3 Strict • JWT Rotating Sessions</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary-container/10 text-primary-container font-code-sm text-code-sm shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
+</span>
+<span>3 Thiết bị đang hoạt động</span>
+</div>
+</div>
+</div>
+<!-- Title and Mass Revoke CTA -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<h1 class="font-headline-xl text-headline-xl tracking-tight text-on-surface flex items-center gap-space-sm">
+          Quản lý Phiên Đăng Nhập &amp; Thiết Bị
+          <span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container text-outline uppercase tracking-wider">Active Sessions</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Giám sát trạng thái phiên thời gian thực, quản lý phân quyền và thu hồi bảo mật tự động trên cụm NexusNode Cloud.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all active:scale-95 shadow-sm" id="btn-refresh-sessions">
+<span class="material-symbols-outlined text-[18px] text-surface-tint">refresh</span>
+<span>Làm mới phiên</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-error-container hover:bg-error text-on-error font-label-md text-label-md font-semibold transition-all shadow-[0_0_16px_rgba(239,68,68,0.25)] active:scale-95" id="btn-revoke-all">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+<span>Đăng xuất khỏi tất cả thiết bị khác</span>
+</button>
+</div>
+</div>
+<!-- Persistent Account Settings Tabs Navigation -->
+<div class="flex items-center gap-space-xs overflow-x-auto pt-space-lg">
+<a class="px-space-md py-2.5 rounded-t-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all shrink-0" href="#">
+        Hồ sơ cá nhân
+      </a>
+<a class="px-space-md py-2.5 rounded-t-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all shrink-0" href="#">
+        Bảo mật &amp; 2FA
+      </a>
+<a class="px-space-md py-2.5 rounded-t-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all shrink-0" href="#">
+        Khóa API &amp; Webhook
+      </a>
+<!-- ACTIVE TAB -->
+<a class="relative px-space-md py-2.5 rounded-t-lg font-label-md text-label-md text-primary-container bg-surface-container font-semibold shrink-0 shadow-[0_-4px_16px_rgba(0,240,255,0.12)]" href="#">
+<span class="relative z-10 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">devices</span>
+          Phiên đăng nhập &amp; Thiết bị
+        </span>
+<span class="absolute bottom-0 left-0 right-0 h-[2px] bg-primary-container shadow-[0_0_8px_#00f0ff]"></span>
+</a>
+<a class="px-space-md py-2.5 rounded-t-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all shrink-0" href="#">
+        Thông báo &amp; Discord Webhook
+      </a>
+</div>
+</div>
+<!-- Main Content Layout Body -->
+<div class="p-space-lg flex flex-col gap-space-xl">
+<!-- Section 1: Session Metrics Cards (4 columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-primary-container/5 rounded-full blur-xl group-hover:bg-primary-container/10 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tổng phiên hoạt động</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">devices_other</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">03</span>
+<span class="font-code-sm text-code-sm text-tertiary-fixed font-semibold">Thiết bị</span>
+</div>
+<p class="font-code-sm text-code-sm text-outline mt-1">1 Hiện tại • 2 Thiết bị từ xa</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary-container/10 rounded-full blur-xl group-hover:bg-secondary-container/20 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Thiết bị chính</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">laptop_windows</span>
+</div>
+<div class="mt-space-md">
+<div class="font-title-sm text-title-sm text-on-surface truncate">Windows 11 Desktop</div>
+<p class="font-code-sm text-code-sm text-surface-tint mt-1 truncate">Chrome 124.0 • Hà Nội, VN</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-tertiary-container/10 rounded-full blur-xl group-hover:bg-tertiary-container/20 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Độ tin cậy vị trí</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">verified_user</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-tertiary-fixed font-bold">98%</span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium">Bảo vệ cao</span>
+</div>
+<p class="font-code-sm text-code-sm text-outline mt-1 truncate">Không phát hiện Tor / VPN rủi ro</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-surface-tint/10 rounded-full blur-xl group-hover:bg-surface-tint/20 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Chu kỳ JWT Token</span>
+<span class="material-symbols-outlined text-surface-tint text-[20px]">timelapse</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">15</span>
+<span class="font-code-sm text-code-sm text-primary-fixed-dim font-semibold">Phút xoay vòng</span>
+</div>
+<p class="font-code-sm text-code-sm text-outline mt-1 truncate">Tự thu hồi sau 7 ngày không hoạt động</p>
+</div>
+</div>
+</div>
+<!-- Section 2: Active Sessions Detailed Section -->
+<div class="flex flex-col gap-space-lg">
+<!-- SUBSECTION A: CURRENT ACTIVE DEVICE -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary-container">sensors</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Phiên hiện tại (Thiết bị này)</h2>
+<span class="font-code-sm text-code-sm text-tertiary bg-surface-container-high px-2 py-0.5 rounded">Active Session</span>
+</div>
+<div class="p-space-lg rounded-2xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low shadow-[0_0_24px_rgba(0,240,255,0.08)] relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary-container shadow-[0_0_12px_#00f0ff]"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<!-- Left Info Panel -->
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-[0_0_16px_rgba(0,240,255,0.2)] shrink-0">
+<span class="material-symbols-outlined text-[32px]">desktop_windows</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-sm mb-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">Windows 11 Pro 64-bit</span>
+<span class="font-code-md text-code-md text-on-surface-variant">• Google Chrome 124.0.6367</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary-fixed font-code-sm text-code-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span>
+</span>
+<span>Thiết bị này (Đang trực tuyến)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-space-lg gap-y-1.5 text-on-surface-variant font-body-sm text-body-sm mt-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">pin_drop</span>
+<span>IP: <strong class="text-on-surface font-code-sm text-code-sm">113.190.234.12</strong> (VNPT, Hà Nội, VN)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">shield</span>
+<span>Auth: <span class="text-tertiary font-medium">Mật khẩu + TOTP 2FA Key</span></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">schedule</span>
+<span>Bắt đầu: Hôm nay 09:12:44 (Cách đây 2 giờ)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">radar</span>
+<span>Hoạt động: <span class="text-primary-container font-semibold">Vừa xong (Quản lý phiên)</span></span>
+</div>
+<div class="flex items-center gap-1.5 col-span-1 md:col-span-2">
+<span class="material-symbols-outlined text-[16px] text-outline">fingerprint</span>
+<span>Fingerprint: <code class="font-code-sm text-code-sm bg-surface-container-lowest px-1.5 py-0.5 rounded text-outline">fp_win_88f921...7a01</code></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Telemetry Badge -->
+<div class="flex flex-col sm:flex-row lg:flex-col items-end justify-center gap-2 shrink-0 bg-surface-container-lowest/60 p-space-md rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-sm text-code-sm text-outline">Mã hóa phiên:</span>
+<span class="font-code-sm text-code-sm text-tertiary-fixed font-semibold bg-tertiary-container/10 px-2 py-0.5 rounded">ChaCha20-Poly1305</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">check_circle</span>
+<span>Node Core: VN-HN-01 (Ping 12ms)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SUBSECTION B: OTHER ACTIVE SESSIONS -->
+<div class="flex flex-col gap-space-sm mt-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-outline">connected_tv</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Các phiên từ xa đang hoạt động (2 thiết bị)</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Có thể thu hồi ngay lập tức nếu nghi ngờ truy cập trái phép</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Remote Device 1: MacBook Pro -->
+<div class="session-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[26px]">laptop_mac</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">MacBook Pro M3 Max</span>
+<span class="font-code-sm text-code-sm text-outline-variant">•</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Safari 17.4.1 (macOS Sonoma)</span>
+<span class="bg-secondary-container/40 text-on-secondary-container px-2 py-0.2 rounded font-code-sm text-code-sm">OAuth SSO</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 text-on-surface-variant font-code-sm text-code-sm mt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">location_on</span>
+                    14.241.120.45 (Viettel, TP. Hồ Chí Minh, VN)
+                  </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">history</span>
+                    Hoạt động: 2 giờ trước
+                  </span>
+<span>•</span>
+<span class="text-outline">Hết hạn sau 5 ngày nếu không tương tác</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end md:self-center">
+<button class="revoke-btn flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-highest hover:bg-error-container text-on-surface hover:text-on-error font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-device="MacBook Pro M3 Max">
+<span class="material-symbols-outlined text-[16px]">phonelink_erase</span>
+<span>Thu hồi phiên</span>
+</button>
+</div>
+</div>
+<!-- Remote Device 2: iPhone 15 Pro Max -->
+<div class="session-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[26px]">smartphone</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">iPhone 15 Pro Max</span>
+<span class="font-code-sm text-code-sm text-outline-variant">•</span>
+<span class="font-body-md text-body-md text-on-surface-variant">NexusNode Cloud Mobile App v2.4 (iOS 17.4)</span>
+<span class="bg-tertiary-container/20 text-tertiary-fixed px-2 py-0.2 rounded font-code-sm text-code-sm">FaceID Biometrics</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 text-on-surface-variant font-code-sm text-code-sm mt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">location_on</span>
+                    42.119.89.60 (Viettel 5G, Đà Nẵng, VN)
+                  </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">history</span>
+                    Hoạt động: Hôm qua lúc 19:30:15
+                  </span>
+<span>•</span>
+<span class="text-outline">Hết hạn sau 14 ngày</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end md:self-center">
+<button class="revoke-btn flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-highest hover:bg-error-container text-on-surface hover:text-on-error font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-device="iPhone 15 Pro Max">
+<span class="material-symbols-outlined text-[16px]">phonelink_erase</span>
+<span>Thu hồi phiên</span>
+</button>
+</div>
+</div>
+<!-- Remote Device 3: Ubuntu 22.04 LTS CLI -->
+<div class="session-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-surface-tint shrink-0">
+<span class="material-symbols-outlined text-[26px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Ubuntu 22.04 LTS (CLI Daemon)</span>
+<span class="font-code-sm text-code-sm text-outline-variant">•</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Postman Runtime / Nexus CLI Daemon v1.9</span>
+<span class="bg-surface-container text-surface-tint px-2 py-0.2 rounded font-code-sm text-code-sm">API Token Sess</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 text-on-surface-variant font-code-sm text-code-sm mt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">location_on</span>
+                    103.149.28.12 (Dedicated Dev Server, Singapore)
+                  </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">history</span>
+                    Hoạt động: 3 ngày trước
+                  </span>
+<span>•</span>
+<span class="text-outline">Hết hạn sau 28 ngày</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end md:self-center">
+<button class="revoke-btn flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-highest hover:bg-error-container text-on-surface hover:text-on-error font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-device="Ubuntu CLI Daemon">
+<span class="material-symbols-outlined text-[16px]">phonelink_erase</span>
+<span>Thu hồi phiên</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Geo-Location Map & Security Rules Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Panel: Interactive Telemetry Geo-Map (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-2xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary-container">map</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Bản đồ Vị trí &amp; Phân tích Địa lý</h3>
+</div>
+<span class="font-code-sm text-code-sm text-tertiary-fixed bg-surface-container px-2 py-0.5 rounded">Core VN-HN01 Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Mô phỏng topo mạng các phiên kết nối đến cụm Cloud NexusNode. Toàn bộ phiên đều được mã hóa kênh truyền TLS 1.3.
+          </p>
+</div>
+<!-- Cyber Vector Map Visualizer -->
+<div class="relative w-full h-72 bg-surface-container-lowest rounded-xl overflow-hidden flex items-center justify-center p-4">
+<!-- Background Grid Texture -->
+<div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293d_1px,transparent_1px),linear-gradient(to_bottom,#1f293d_1px,transparent_1px)] bg-[size:24px_24px] opacity-25"></div>
+<!-- Animated Radar Arc Sweep -->
+<div class="absolute w-96 h-96 rounded-full border border-primary-container/10 animate-ping opacity-20 pointer-events-none"></div>
+<!-- SVG Topology Lines & Coordinate Nodes -->
+<svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="cyanLine" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#571bc1" stop-opacity="0.2"></stop>
+</lineargradient>
+</defs>
+<!-- HN to HCM -->
+<path class="animate-pulse" d="M 230 75 Q 240 140 250 190" fill="none" stroke="url(#cyanLine)" stroke-dasharray="4,4" stroke-width="2"></path>
+<!-- HN to Danang -->
+<path d="M 230 75 Q 245 105 265 130" fill="none" opacity="0.6" stroke="#00f0ff" stroke-dasharray="2,3" stroke-width="1.5"></path>
+<!-- HN to Singapore -->
+<path d="M 230 75 Q 210 180 235 245" fill="none" opacity="0.5" stroke="#d0bcff" stroke-dasharray="3,3" stroke-width="1.5"></path>
+</svg>
+<!-- Node Points -->
+<!-- Hanoi Core (Master) -->
+<div class="absolute top-[65px] left-[220px] flex items-center gap-2 group cursor-pointer z-10">
+<div class="relative flex h-4 w-4">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-90"></span>
+<span class="relative inline-flex rounded-full h-4 w-4 bg-primary-container shadow-[0_0_12px_#00f0ff]"></span>
+</div>
+<div class="bg-surface-container-high/90 backdrop-blur-md px-2 py-0.5 rounded border border-primary-container/30 text-primary font-code-sm text-code-sm">
+              Hà Nội (Thiết bị này)
+            </div>
+</div>
+<!-- Danang Node -->
+<div class="absolute top-[125px] left-[255px] flex items-center gap-2 group cursor-pointer z-10">
+<div class="h-2.5 w-2.5 rounded-full bg-tertiary-fixed shadow-[0_0_8px_#6ffbbe]"></div>
+<div class="bg-surface-container-high/80 px-1.5 py-0.5 rounded text-on-surface font-code-sm text-code-sm opacity-80 group-hover:opacity-100">
+              Đà Nẵng (Mobile)
+            </div>
+</div>
+<!-- TP.HCM Node -->
+<div class="absolute top-[185px] left-[242px] flex items-center gap-2 group cursor-pointer z-10">
+<div class="h-2.5 w-2.5 rounded-full bg-secondary shadow-[0_0_8px_#d0bcff]"></div>
+<div class="bg-surface-container-high/80 px-1.5 py-0.5 rounded text-on-surface font-code-sm text-code-sm opacity-80 group-hover:opacity-100">
+              TP. Hồ Chí Minh (MacBook)
+            </div>
+</div>
+<!-- Singapore Node -->
+<div class="absolute top-[238px] left-[228px] flex items-center gap-2 group cursor-pointer z-10">
+<div class="h-2 w-2 rounded-full bg-surface-tint"></div>
+<div class="bg-surface-container-high/80 px-1.5 py-0.5 rounded text-on-surface font-code-sm text-code-sm opacity-70 group-hover:opacity-100">
+              Singapore (CLI Daemon)
+            </div>
+</div>
+<!-- Bottom Telemetry Strip inside map -->
+<div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm bg-surface-container-low/80 backdrop-blur-sm px-3 py-1.5 rounded-lg">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">shield_lock</span>
+              Anomalies: 0 detected (Zero threat score)
+            </span>
+<span class="text-surface-tint font-mono">BGP Anycast Routing • 4/4 Handshakes Valid</span>
+</div>
+</div>
+<div class="mt-space-md grid grid-cols-3 gap-space-sm pt-space-xs text-center">
+<div class="p-2 rounded bg-surface-container font-code-sm text-code-sm">
+<span class="text-outline block">Quốc gia</span>
+<strong class="text-on-surface">Việt Nam, Singapore</strong>
+</div>
+<div class="p-2 rounded bg-surface-container font-code-sm text-code-sm">
+<span class="text-outline block">Nhà mạng</span>
+<strong class="text-on-surface">VNPT, Viettel, AWS</strong>
+</div>
+<div class="p-2 rounded bg-surface-container font-code-sm text-code-sm">
+<span class="text-outline block">Trạng thái VPN/Tor</span>
+<strong class="text-tertiary-fixed">Đã xác minh an toàn</strong>
+</div>
+</div>
+</div>
+<!-- Right Panel: Session Security Rules & Guards (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-2xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">tune</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Quy tắc Phòng thủ Phiên</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Cấu hình bảo mật chủ động để phát hiện và cô lập các hành vi chiếm đoạt phiên (Session Hijacking).
+          </p>
+<!-- Security Toggles List -->
+<div class="flex flex-col gap-space-md">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container">
+<div class="flex flex-col pr-2">
+<span class="font-title-sm text-title-sm text-on-surface font-medium">Tự động đăng xuất khi nhàn rỗi</span>
+<span class="font-body-sm text-body-sm text-outline">Thu hồi token nếu không tương tác trong thời gian định trước</span>
+</div>
+<div class="flex items-center gap-2">
+<select class="bg-surface-container-high text-primary font-code-sm text-code-sm px-2 py-1 rounded outline-none cursor-pointer">
+<option selected="">30 Phút</option>
+<option>1 Giờ</option>
+<option>4 Giờ</option>
+<option>1 Ngày</option>
+</select>
+</div>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container">
+<div class="flex flex-col pr-2">
+<span class="font-title-sm text-title-sm text-on-surface font-medium">Khóa phiên khi đổi IP đột ngột</span>
+<span class="font-body-sm text-body-sm text-outline">IP Hopping Guard - Bắt buộc re-auth nếu đổi ASN / subnet</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Toggle 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container">
+<div class="flex flex-col pr-2">
+<span class="font-title-sm text-title-sm text-on-surface font-medium">Cảnh báo Telegram &amp; Discord</span>
+<span class="font-body-sm text-body-sm text-outline">Ping khẩn cấp tới Webhook khi có thiết bị mới đăng nhập</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Toggle 4 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container">
+<div class="flex flex-col pr-2">
+<span class="font-title-sm text-title-sm text-on-surface font-medium">Chặn Proxy ẩn danh &amp; Mạng Tor</span>
+<span class="font-body-sm text-body-sm text-outline">Từ chối toàn bộ request từ exit node Tor và IP proxy rủi ro cao</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-lowest/80 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">verified</span>
+<span>Mọi thay đổi quy tắc được đồng bộ qua Vault</span>
+</div>
+<button class="text-primary-container font-label-md text-label-md hover:underline">Lưu quy tắc</button>
+</div>
+</div>
+</div>
+<!-- Section 4: Historical Login & Revoked Sessions Log -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl shadow-md flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">manage_history</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Lịch Sử Đăng Nhập &amp; Phiên Đã Thu Hồi</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Nhật ký lưu trữ bất biến (Immutable Audit Log) trong vòng 90 ngày phục vụ điều tra truy vết.
+          </p>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all self-start sm:self-auto shadow-sm" id="btn-export-csv">
+<span class="material-symbols-outlined text-[18px] text-surface-tint">download</span>
+<span>Tải toàn bộ nhật ký (.CSV)</span>
+</button>
+</div>
+<!-- Audit Table Container -->
+<div class="w-full overflow-x-auto rounded-xl">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Thời gian</th>
+<th class="py-space-sm px-space-md">Thiết bị / Ứng dụng</th>
+<th class="py-space-sm px-space-md">Địa chỉ IP &amp; Vị trí</th>
+<th class="py-space-sm px-space-md">Phương thức Xác thực</th>
+<th class="py-space-sm px-space-md">Trạng thái phiên</th>
+<th class="py-space-sm px-space-md text-right">Chi tiết</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-code-sm text-code-sm text-on-surface">
+                Hôm nay 09:12:44
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container">desktop_windows</span>
+<span class="font-medium text-on-surface">Windows 11 Chrome 124</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-code-sm text-code-sm">
+<span class="text-on-surface font-semibold">113.190.234.12</span>
+<span class="text-outline block">Hà Nội, Việt Nam</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 text-tertiary-fixed font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[14px]">key</span>
+                  Password + 2FA Key
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary-fixed font-code-sm text-code-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-container"></span>
+                  Đang hoạt động
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="text-surface-tint hover:underline font-code-sm text-code-sm">Audit Payload</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-code-sm text-code-sm text-on-surface-variant">
+                18/04 22:40:11
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">laptop</span>
+<span class="text-on-surface-variant">Windows 11 Firefox 125</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-code-sm text-code-sm">
+<span class="text-on-surface-variant">118.70.14.92</span>
+<span class="text-outline block">Hà Nội, Việt Nam</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant font-code-sm text-code-sm">
+                Mật khẩu chính
+              </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm">
+                  Đã đăng xuất thủ công
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="text-outline hover:text-on-surface font-code-sm text-code-sm">Log #9084</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-code-sm text-code-sm text-on-surface-variant">
+                16/04 14:15:02
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">smartphone</span>
+<span class="text-on-surface-variant">iPhone 15 Pro (Nexus App)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-code-sm text-code-sm">
+<span class="text-on-surface-variant">42.119.89.60</span>
+<span class="text-outline block">Đà Nẵng, Việt Nam</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant font-code-sm text-code-sm">
+                FaceID Mobile App
+              </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container text-outline font-code-sm text-code-sm">
+                  Hết hạn tự động (Expired)
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="text-outline hover:text-on-surface font-code-sm text-code-sm">Log #8921</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-lowest/50 hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-code-sm text-code-sm text-error">
+                14/04 03:10:49
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-error">gpp_bad</span>
+<span class="text-error font-medium">Linux CLI / Unknown Script</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-code-sm text-code-sm">
+<span class="text-error font-semibold">194.26.29.112</span>
+<span class="text-outline block">Frankfurt, Germany</span>
+</td>
+<td class="py-space-md px-space-md text-outline font-code-sm text-code-sm">
+                Invalid API Key
+              </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-error-container text-on-error font-code-sm text-code-sm font-semibold shadow-sm">
+<span class="h-1.5 w-1.5 rounded-full bg-on-error"></span>
+                  Bị chặn bởi Firewall (IP Blocked)
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="text-error hover:underline font-code-sm text-code-sm">Threat Report</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span>Hiển thị 4 trên 48 bản ghi nhật ký xác thực</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container text-outline hover:text-on-surface transition-colors" disabled="">Trước</button>
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-bold">1</button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">2</button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">3</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">Sau</button>
+</div>
+</div>
+</div>
+<!-- Section 5: Security Compliance & Fingerprint Footer Note -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest/70 backdrop-blur-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bảo mật định danh NexusNode Vault Guard</span>
+<span class="font-body-sm text-body-sm text-outline">
+            Dữ liệu phiên được mã hóa theo hàm băm mật mã SHA-256 phần cứng. Tuân thủ nghiêm ngặt tiêu chuẩn bảo mật đám mây ISO/IEC 27001 và SOC 2 Type II.
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="font-code-sm text-code-sm text-outline">Master Tenant ID: <strong class="text-primary-container font-mono">NX-TENANT-9821-VN</strong></span>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Scripting for Micro-interactions -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Refresh Sessions action
+      const refreshBtn = document.getElementById('btn-refresh-sessions');
+      if (refreshBtn) {
+        refreshBtn.addEventListener('click', function () {
+          const icon = this.querySelector('.material-symbols-outlined');
+          if (icon) icon.classList.add('animate-spin');
+          setTimeout(() => {
+            if (icon) icon.classList.remove('animate-spin');
+            alert('Đã cập nhật danh sách phiên và telemetry theo thời gian thực!');
+          }, 600);
+        });
+      }
+
+      // Revoke Single Session Button Action
+      const revokeButtons = document.querySelectorAll('.revoke-btn');
+      revokeButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const deviceName = this.getAttribute('data-device') || 'thiết bị này';
+          const confirmed = confirm(`Bạn có chắc chắn muốn thu hồi phiên đăng nhập của "${deviceName}" ngay lập tức?`);
+          if (confirmed) {
+            const card = this.closest('.session-card');
+            if (card) {
+              card.style.transition = 'all 0.3s ease';
+              card.style.opacity = '0.3';
+              card.style.pointerEvents = 'none';
+              this.textContent = 'Đã thu hồi';
+              this.className = 'px-space-md py-1.5 rounded-lg bg-surface-container text-outline font-label-md text-label-md cursor-not-allowed';
+            }
+          }
+        });
+      });
+
+      // Revoke All Other Sessions
+      const revokeAllBtn = document.getElementById('btn-revoke-all');
+      if (revokeAllBtn) {
+        revokeAllBtn.addEventListener('click', function () {
+          const confirmRevokeAll = confirm('CẢNH BÁO BẢO MẬT:\nTất cả phiên đăng nhập trên các máy tính, laptop và ứng dụng di động khác sẽ bị hủy ngay lập tức. Bạn sẽ chỉ duy trì kết nối trên thiết bị này. Tiếp tục?');
+          if (confirmRevokeAll) {
+            revokeButtons.forEach(btn => {
+              const card = btn.closest('.session-card');
+              if (card) {
+                card.style.opacity = '0.3';
+                card.style.pointerEvents = 'none';
+              }
+              btn.textContent = 'Đã thu hồi';
+              btn.className = 'px-space-md py-1.5 rounded-lg bg-surface-container text-outline font-label-md text-label-md cursor-not-allowed';
+            });
+            alert('Đã thu hồi thành công toàn bộ phiên từ xa!');
+          }
+        });
+      }
+
+      // Export CSV
+      const exportBtn = document.getElementById('btn-export-csv');
+      if (exportBtn) {
+        exportBtn.addEventListener('click', function () {
+          alert('Hệ thống đang chuẩn bị gói tệp xuất: nexusnode_sessions_audit_log.csv');
+        });
+      }
+    });
+  </script>
+</div></main></div></body></html>

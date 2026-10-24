@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#0a0e16","surface-tint":"#00dbe9","inverse-surface":"#dfe2ee","error-container":"#93000a","on-surface":"#dfe2ee","tertiary":"#d8ffe7","inverse-primary":"#006970","on-error":"#690005","surface-variant":"#31353e","tertiary-fixed":"#6ffbbe","secondary":"#d0bcff","outline-variant":"#3b494b","on-background":"#dfe2ee","inverse-on-surface":"#2c3039","error":"#ffb4ab","surface-container-high":"#262a33","on-secondary-container":"#c4abff","secondary-fixed-dim":"#d0bcff","secondary-fixed":"#e9ddff","surface-dim":"#0f131c","on-tertiary":"#003824","primary-container":"#00f0ff","surface-container-highest":"#31353e","on-tertiary-fixed-variant":"#005236","primary-fixed-dim":"#00dbe9","primary-fixed":"#7df4ff","on-primary-fixed":"#002022","on-error-container":"#ffdad6","on-primary-container":"#006970","surface-container-low":"#181c24","primary":"#dbfcff","on-tertiary-container":"#006d4a","on-tertiary-fixed":"#002113","surface-container":"#1c2028","on-primary-fixed-variant":"#004f54","on-secondary":"#3c0091","on-surface-variant":"#b9cacb","secondary-container":"#571bc1","on-primary":"#00363a","outline":"#849495","on-secondary-fixed":"#23005c","tertiary-fixed-dim":"#4edea3","surface":"#0f131c","surface-bright":"#353942","tertiary-container":"#65f2b5","background":"#0f131c","on-secondary-fixed-variant":"#5516be"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"2rem","margin-mobile":"1rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","space-sm":"0.5rem","gutter-mobile":"0.75rem","gutter":"1.5rem"},fontFamily:{"body-md":["Inter"],"label-md":["Inter"],"title-sm":["Inter"],"code-lg":["JetBrains Mono"],"label-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"code-sm":["JetBrains Mono"],"headline-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-xl":["Plus Jakarta Sans"],"code-md":["JetBrains Mono"],"body-sm":["Inter"]},fontSize:{"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"title-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"code-lg":["14px",{"lineHeight":"22px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"code-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-md":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm"><img alt="NexusNode Cloud Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wnx1Ne8D7AraCUMkqq5zUDlMaM9lfwUjzF9c_ZTM1Fjc7OOdzokRM533DKwky9Sho8Ina6YJH_2ldZnczeJD4pVlEpGlSNenwRQkIKZtSAosKD-acuC2SexxiYWYHUm65R5IYBOEHPh3POpDjIRh8J2VG7qvCh6U3FwQkU1q1-Y_3v8NC0NI5bgj8uYPSMa1JXUK3-sI64Jn4BE2_SdJFQOxxmRMud29d5Z3l2rg5IcKdBO0QTXLN6_WY"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-none">NexusNode</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-tint mt-0.5">Game Hosting</span></div></div><div class="px-space-md py-space-sm"><div class="bg-surface-container-low px-space-md py-space-sm rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-fixed-dim"></span></span><span class="font-code-sm text-code-sm text-on-surface-variant">Network Core</span></div><span class="font-code-sm text-code-sm text-tertiary-fixed font-semibold">99.98%</span></div></div><nav class="flex flex-col gap-1 px-space-md mt-space-sm" data-active-classes="bg-surface-container-high text-primary-container font-semibold shadow-[inset_0_0_12px_rgba(0,240,255,0.15)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="tong-quan" href="index.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Tổng quan</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="thue-server" href="thue-server.html"><span class="material-symbols-outlined text-[20px]">dns</span><span class="font-label-md text-label-md">Thuê Server</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="quan-ly-server" href="quan-ly-server.html"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-label-md text-label-md">Quản lý Server</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="nap-tien-vi" href="nap-tien-vi.html"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-md text-label-md">Nạp tiền &amp; Ví</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="tai-lieu-api" href="tai-lieu-api.html"><span class="material-symbols-outlined text-[20px]">code_blocks</span><span class="font-label-md text-label-md">Tài liệu &amp; API</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-200" data-path="cai-dat" href="cai-dat.html"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Cài đặt</span></a></nav></div><div class="p-space-md"><div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="h-2 w-2 rounded-full bg-primary-container shadow-[0_0_8px_#00f0ff]"></div><div class="flex flex-col"><span class="font-code-sm text-code-sm text-on-surface-variant">Datacenter</span><span class="font-label-sm text-label-sm text-on-surface">VN-HN-01</span></div></div><span class="font-code-sm text-code-sm text-surface-tint">12ms</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="w-full h-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-11 pr-space-md py-space-sm bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Tìm kiếm máy chủ, node IP, tài liệu..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span></span><span class="font-code-sm text-code-sm text-on-surface-variant">Status:</span><span class="font-code-sm text-code-sm text-tertiary font-medium">Online 99.98%</span></div><div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-xs rounded-full"><div class="flex flex-col items-end"><span class="font-code-sm text-code-sm text-outline">Số dư</span><span class="font-code-md text-code-md text-primary font-semibold">250.000đ</span></div><button class="bg-primary-container text-on-primary-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-semibold hover:bg-primary-fixed-dim transition-all">+ Nạp thêm</button></div><button class="relative p-space-sm text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMYDbsqB7N_O-wBCtjrxPfwn_VIfRW7bxAb706knTvtxhhAhchCAVAjg-mXLLiRT_sh8DLN3ahx1HoiLs-H0LG1EFBjz4xqJFCnTRbOoFAiSkAqfuTr9CK8IsZ3yeJLRmLtmAOomeEP8Cd5RLCJMSIQdjOV818bXFlNNy0IdIs2mJEHwHlQHWRBn4igI3vT2aOz8n0Jc7rtn4rkaFT8KtGdI2KPUgLNs1oO6pJGQelXm0g0Jj33EerBw"/><div class="hidden md:flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold">AlexGamer#0912</span><span class="bg-secondary-container text-on-secondary-container px-1.5 py-0.2 rounded font-label-sm text-label-sm">VIP Pro</span></div><span class="font-code-sm text-code-sm text-on-surface-variant">alex.cloud@nexus.io</span></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full p-space-md lg:p-space-lg space-y-space-lg">
+<!-- TOP CONTEXT & DB STATUS BANNER -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container-lowest/80 p-space-lg rounded-xl shadow-xl backdrop-blur-xl">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Quản lý Máy chủ &amp; CSDL cụm</h1>
+<div class="flex items-center gap-2 bg-surface-container-high px-space-md py-1 rounded-full">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span>
+</span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium">
+            MySQL Cluster: Connected <span class="text-on-surface-variant font-normal">(nodes_db.servers_table v8.0.36)</span>
+</span>
+<span class="text-outline-variant font-code-sm text-code-sm">|</span>
+<span class="font-code-sm text-code-sm text-surface-tint">1.4ms Latency</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Theo dõi, kiểm soát vòng đời thực thể máy chủ game, phân bổ tài nguyên NVMe và điều phối các bản ghi dữ liệu tự động.
+      </p>
+</div>
+<!-- Cluster Action Bar -->
+<div class="flex items-center gap-space-sm flex-wrap self-start xl:self-auto">
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container px-space-md py-2.5 rounded-lg font-title-sm text-title-sm font-semibold hover:bg-primary-fixed-dim shadow-[0_0_16px_rgba(0,240,255,0.25)] transition-all" onclick="document.getElementById('editModal').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Thêm Máy Chủ Mới</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container-high text-on-surface px-space-md py-2.5 rounded-lg font-label-md text-label-md hover:bg-surface-bright transition-colors" onclick="triggerToast('Đã khởi chạy chuỗi đồng bộ bảng máy chủ với MySQL Cluster Master!')">
+<span class="material-symbols-outlined text-[18px] text-surface-tint">sync</span>
+<span>Đồng bộ CSDL</span>
+</button>
+<div class="relative group">
+<button class="flex items-center gap-1.5 bg-surface-container-high text-on-surface px-space-md py-2.5 rounded-lg font-label-md text-label-md hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Xuất dữ liệu</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 hidden group-hover:flex flex-col w-44 bg-surface-container-high shadow-2xl rounded-lg p-1 z-30">
+<button class="flex items-center gap-2 px-space-sm py-2 rounded text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-highest" onclick="triggerToast('Đang kết xuất servers_table_dump.sql...')">
+<span class="material-symbols-outlined text-[16px] text-primary">database</span>
+<span>Kết xuất (.SQL)</span>
+</button>
+<button class="flex items-center gap-2 px-space-sm py-2 rounded text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-highest" onclick="triggerToast('Đang kết xuất nodes_servers_export.csv...')">
+<span class="material-symbols-outlined text-[16px] text-tertiary">table_view</span>
+<span>Bảng tính (.CSV)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- TELEMETRY STATS TILES -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat 1: Total Servers -->
+<div class="bg-surface-container-low/90 backdrop-blur-md p-space-md rounded-xl shadow-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline uppercase tracking-wider">Tổng Máy Chủ DB</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">06</span>
+<span class="font-code-sm text-code-sm text-tertiary">Nodes cấp phép</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Giới hạn gói: 10 Máy chủ</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container shadow-inner">
+<span class="material-symbols-outlined text-[26px]">dns</span>
+</div>
+</div>
+<!-- Stat 2: Allocation Breakdown -->
+<div class="bg-surface-container-low/90 backdrop-blur-md p-space-md rounded-xl shadow-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline uppercase tracking-wider">Trạng Thái Thực Thể</span>
+<div class="flex items-center gap-2 mt-1.5 flex-wrap">
+<span class="font-code-md text-code-md text-tertiary font-semibold flex items-center gap-1">
+<span class="h-2 w-2 rounded-full bg-tertiary"></span> 4 Chạy
+          </span>
+<span class="text-outline-variant font-code-sm text-code-sm">•</span>
+<span class="font-code-md text-code-md text-error font-semibold flex items-center gap-1">
+<span class="h-2 w-2 rounded-full bg-error"></span> 1 Dừng
+          </span>
+<span class="text-outline-variant font-code-sm text-code-sm">•</span>
+<span class="font-code-md text-code-md text-secondary font-semibold">1 Sao lưu</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sẵn sàng phản hồi 99.98%</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary shadow-inner">
+<span class="material-symbols-outlined text-[26px]">vital_signs</span>
+</div>
+</div>
+<!-- Stat 3: DB Storage NVMe -->
+<div class="bg-surface-container-low/90 backdrop-blur-md p-space-md rounded-xl shadow-md flex items-center justify-between">
+<div class="flex flex-col w-full pr-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-outline uppercase tracking-wider">CSDL NVMe</span>
+<span class="font-code-sm text-code-sm text-primary font-medium">42.8%</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">42.8</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">/ 100 GB</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full shadow-[0_0_8px_#00f0ff]" style="width: 42.8%;"></div>
+</div>
+</div>
+<div class="w-12 h-12 shrink-0 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-fixed-dim shadow-inner">
+<span class="material-symbols-outlined text-[26px]">database</span>
+</div>
+</div>
+<!-- Stat 4: Realtime QPS -->
+<div class="bg-surface-container-low/90 backdrop-blur-md p-space-md rounded-xl shadow-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm text-outline uppercase tracking-wider">Lưu Lượng Truy Vấn</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">1,420</span>
+<span class="font-code-sm text-code-sm text-secondary-fixed-dim">QPS</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary-fixed-dim font-code-sm text-code-sm mt-0.5">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Đồng bộ Realtime liên tục</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary shadow-inner">
+<span class="material-symbols-outlined text-[26px]">speed</span>
+</div>
+</div>
+</div>
+<!-- SEARCH, FILTERS & BATCH BAR -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<!-- Search Field -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-11 pr-space-md py-2.5 bg-surface-container rounded-lg text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" id="searchInput" placeholder="Tìm kiếm theo Server ID, Tên máy chủ, Port hoặc Database node..." type="text"/>
+</div>
+<!-- Dropdowns Filter Controls -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Game Filter -->
+<div class="flex items-center gap-1.5 bg-surface-container px-space-md py-1.5 rounded-lg text-on-surface font-label-md text-label-md">
+<span class="text-outline font-label-sm text-label-sm">Game:</span>
+<select class="bg-transparent text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer">
+<option class="bg-surface-container-high">Tất cả trò chơi</option>
+<option class="bg-surface-container-high">Minecraft</option>
+<option class="bg-surface-container-high">Palworld</option>
+<option class="bg-surface-container-high">Counter-Strike 2</option>
+<option class="bg-surface-container-high">Rust Survival</option>
+<option class="bg-surface-container-high">FiveM Roleplay</option>
+</select>
+</div>
+<!-- Status Filter -->
+<div class="flex items-center gap-1.5 bg-surface-container px-space-md py-1.5 rounded-lg text-on-surface font-label-md text-label-md">
+<span class="text-outline font-label-sm text-label-sm">Trạng thái:</span>
+<select class="bg-transparent text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer">
+<option class="bg-surface-container-high">Tất cả trạng thái</option>
+<option class="bg-surface-container-high">Đang chạy (Active)</option>
+<option class="bg-surface-container-high">Đã dừng (Stopped)</option>
+<option class="bg-surface-container-high">Bảo trì / Backup</option>
+<option class="bg-surface-container-high">Quá hạn gia hạn</option>
+</select>
+</div>
+<!-- Node Filter -->
+<div class="flex items-center gap-1.5 bg-surface-container px-space-md py-1.5 rounded-lg text-on-surface font-label-md text-label-md">
+<span class="text-outline font-label-sm text-label-sm">Cụm Node:</span>
+<select class="bg-transparent text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer">
+<option class="bg-surface-container-high">Tất cả Datacenter</option>
+<option class="bg-surface-container-high">VN-HN-01 (Tier 3+)</option>
+<option class="bg-surface-container-high">VN-SGN-02 (FPT Data)</option>
+<option class="bg-surface-container-high">SIN-E-01 (Equinix SG)</option>
+</select>
+</div>
+<!-- Bulk Actions Menu -->
+<div class="relative group">
+<button class="flex items-center gap-1.5 bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-md py-2 rounded-lg font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+<span>Thao tác đã chọn</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 hidden group-hover:flex flex-col w-52 bg-surface-container-high shadow-2xl rounded-lg p-1.5 z-30">
+<button class="flex items-center gap-2 px-space-sm py-2 rounded text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-highest" onclick="triggerToast('Đang gửi lệnh khởi động lại 2 máy chủ đã đánh dấu...')">
+<span class="material-symbols-outlined text-[16px] text-tertiary">restart_alt</span>
+<span>Khởi động lại (Restart)</span>
+</button>
+<button class="flex items-center gap-2 px-space-sm py-2 rounded text-left font-label-md text-label-md text-on-surface hover:bg-surface-container-highest" onclick="triggerToast('Đã phát tín hiệu dừng an toàn (SIGTERM)...')">
+<span class="material-symbols-outlined text-[16px] text-outline">stop_circle</span>
+<span>Dừng tạm thời (Stop)</span>
+</button>
+<button class="flex items-center gap-2 px-space-sm py-2 rounded text-left font-label-md text-label-md text-error hover:bg-error-container/30" onclick="triggerToast('CẢNH BÁO: Đang mở cổng xác thực Drop Database hàng loạt!', true)">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+<span>Xóa vĩnh viễn đã chọn</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CORE CRUD DATA TABLE CONTAINER -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-xl rounded-xl shadow-2xl overflow-hidden flex flex-col">
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse min-w-[1080px]">
+<thead>
+<tr class="bg-surface-container-low/60 text-outline uppercase font-code-sm text-code-sm tracking-wider">
+<th class="py-space-md px-space-md w-12 text-center">
+<input class="rounded bg-surface-container text-primary-container focus:ring-0 cursor-pointer" id="selectAll" type="checkbox"/>
+</th>
+<th class="py-space-md px-space-sm">Server ID</th>
+<th class="py-space-md px-space-md">Tên Máy Chủ &amp; Bản Cài</th>
+<th class="py-space-md px-space-md">Địa Chỉ IP &amp; Port</th>
+<th class="py-space-md px-space-md">Phần Cứng (vCPU/RAM/SSD)</th>
+<th class="py-space-md px-space-md">MySQL DB Liên Kết</th>
+<th class="py-space-md px-space-md">Trạng Thái</th>
+<th class="py-space-md px-space-md">Hạn Dùng</th>
+<th class="py-space-md px-space-lg text-right">Thao Tác CSDL</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-md font-body-md">
+<!-- ROW 1: Minecraft SMP -->
+<tr class="hover:bg-surface-container-low/80 transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="rounded bg-surface-container text-primary-container focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm font-code-md text-code-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-primary-fixed font-semibold tracking-wide">#SRV-1092</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px] text-tertiary">view_in_ar</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Minecraft SMP Survival S3</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-code-sm text-code-sm text-surface-tint">PaperMC 1.20.4</span>
+<span class="text-outline-variant font-code-sm text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">42/60 Players</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-code-md text-code-md">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded w-fit">
+<span class="text-on-surface select-all">mc.nexusnode.cloud:25565</span>
+<button class="text-outline hover:text-primary transition-colors" onclick="navigator.clipboard.writeText('mc.nexusnode.cloud:25565'); triggerToast('Đã copy IP:Port vào bộ nhớ tạm!')" title="Sao chép IP">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface">4 vCPU • 8 GB RAM</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">50 GB NVMe Gen4</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium">srv_mc_smp_db</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline mt-0.5">1.2 GB / Latency 0.8ms</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full text-tertiary">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold">Đang chạy</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Còn 22 ngày</span>
+<span class="font-code-sm text-code-sm text-outline">18/04/2025</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-primary transition-colors" onclick="document.getElementById('editModal').classList.remove('hidden')" title="Chỉnh sửa cấu hình">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-surface-tint transition-colors" onclick="triggerToast('Đang kết nối terminal máy chủ #SRV-1092...')" title="Quản lý Terminal &amp; Console">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-error-container/40 text-error transition-colors" onclick="confirmDelete('#SRV-1092', 'Minecraft SMP Survival S3')" title="Xóa máy chủ khỏi CSDL">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: Palworld Dedicated -->
+<tr class="hover:bg-surface-container-low/80 transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="rounded bg-surface-container text-primary-container focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm font-code-md text-code-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-primary-fixed font-semibold tracking-wide">#SRV-2041</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px] text-secondary">pest_control</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Palworld VN Official #01</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-code-sm text-code-sm text-surface-tint">Steam v0.2.4.0</span>
+<span class="text-outline-variant font-code-sm text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">28/32 Pals</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-code-md text-code-md">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded w-fit">
+<span class="text-on-surface select-all">pal01.nexusnode.cloud:8211</span>
+<button class="text-outline hover:text-primary transition-colors" onclick="navigator.clipboard.writeText('pal01.nexusnode.cloud:8211'); triggerToast('Đã copy IP Palworld!')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface">8 vCPU • 32 GB RAM</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">120 GB NVMe Gen4</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium">palworld_s1_records</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline mt-0.5">8.4 GB / Latency 1.2ms</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full text-tertiary">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold">Đang chạy</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Còn 64 ngày</span>
+<span class="font-code-sm text-code-sm text-outline">30/05/2025</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-primary transition-colors" onclick="document.getElementById('editModal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-surface-tint transition-colors" onclick="triggerToast('Đang kết nối terminal máy chủ #SRV-2041...')">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-error-container/40 text-error transition-colors" onclick="confirmDelete('#SRV-2041', 'Palworld VN Official #01')">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: Counter-Strike 2 -->
+<tr class="hover:bg-surface-container-low/80 transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="rounded bg-surface-container text-primary-container focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm font-code-md text-code-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-primary-fixed font-semibold tracking-wide">#SRV-3318</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px] text-primary-container">sports_esports</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">CS2 Pro Match 128-Tick</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-code-sm text-code-sm text-surface-tint">Source 2 v1.39</span>
+<span class="text-outline-variant font-code-sm text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">10/10 Live Match</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-code-md text-code-md">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded w-fit">
+<span class="text-on-surface select-all">cs2.nexusnode.cloud:27015</span>
+<button class="text-outline hover:text-primary transition-colors" onclick="navigator.clipboard.writeText('cs2.nexusnode.cloud:27015'); triggerToast('Đã copy IP CS2!')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface">6 vCPU • 16 GB RAM</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">40 GB NVMe Gen4</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium">cs2_pug_stats_db</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline mt-0.5">450 MB / Latency 0.5ms</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full text-tertiary">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold">Đang chạy</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Còn 5 ngày</span>
+<span class="font-code-sm text-code-sm text-error">01/04/2025 (Sắp hết)</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-primary transition-colors" onclick="document.getElementById('editModal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-surface-tint transition-colors" onclick="triggerToast('Đang kết nối terminal CS2...')">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-error-container/40 text-error transition-colors" onclick="confirmDelete('#SRV-3318', 'CS2 Pro Match 128-Tick')">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: Rust Procedural Map (Stopped) -->
+<tr class="hover:bg-surface-container-low/80 transition-colors group opacity-85 hover:opacity-100">
+<td class="py-space-md px-space-md text-center">
+<input class="rounded bg-surface-container text-primary-container focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm font-code-md text-code-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-outline font-semibold tracking-wide">#SRV-4190</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px] text-error">construction</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Rust Survival Vanilla 3x</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-code-sm text-code-sm text-outline">Oxide / uMod v2.0</span>
+<span class="text-outline-variant font-code-sm text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-outline">0/150 Offline</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-code-md text-code-md">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded w-fit text-outline">
+<span class="select-all">rust.nexusnode.cloud:28015</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface">6 vCPU • 16 GB RAM</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">80 GB NVMe Gen4</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="h-1.5 w-1.5 rounded-full bg-error"></span>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-medium">rust_oxide_world</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline mt-0.5">14.1 GB / Offline</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full text-outline">
+<span class="h-2 w-2 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm font-semibold">Đã dừng</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Còn 18 ngày</span>
+<span class="font-code-sm text-code-sm text-outline">14/04/2025</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-primary transition-colors" onclick="document.getElementById('editModal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-tertiary transition-colors" onclick="triggerToast('Đang khởi động lại node Rust #SRV-4190...')" title="Bật server">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-error-container/40 text-error transition-colors" onclick="confirmDelete('#SRV-4190', 'Rust Survival Vanilla 3x')">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5: FiveM Roleplay City (Maintenance / Backup) -->
+<tr class="hover:bg-surface-container-low/80 transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="rounded bg-surface-container text-primary-container focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm font-code-md text-code-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-secondary font-semibold tracking-wide">#SRV-5083</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px] text-surface-tint">directions_car</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">FiveM Saigon City RP v2</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-code-sm text-code-sm text-surface-tint">QBCore Framework</span>
+<span class="text-outline-variant font-code-sm text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-secondary">Đang snapshot CSDL...</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-code-md text-code-md">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded w-fit">
+<span class="text-on-surface select-all">fivem.nexusnode.cloud:30120</span>
+<button class="text-outline hover:text-primary transition-colors" onclick="navigator.clipboard.writeText('fivem.nexusnode.cloud:30120'); triggerToast('Đã copy IP FiveM!')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface">8 vCPU • 32 GB RAM</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">150 GB NVMe Gen4</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">fivem_qbcore_main</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline mt-0.5">18.65 GB / Backup Active</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full text-secondary">
+<span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold">Đang bảo trì</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Còn 41 ngày</span>
+<span class="font-code-sm text-code-sm text-outline">07/05/2025</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-primary transition-colors" onclick="document.getElementById('editModal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-surface-tint transition-colors" onclick="triggerToast('Đang kết nối console snapshot FiveM...')">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-error-container/40 text-error transition-colors" onclick="confirmDelete('#SRV-5083', 'FiveM Saigon City RP v2')">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- TABLE PAGINATION FOOTER -->
+<div class="bg-surface-container-low/70 px-space-lg py-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hiển thị</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">1 - 5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">trên tổng số</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">6 máy chủ</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md disabled:opacity-40" disabled="">
+          Trang trước
+        </button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-code-sm text-code-sm font-semibold flex items-center justify-center shadow-[0_0_10px_rgba(0,240,255,0.3)]">
+          1
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-code-sm text-code-sm font-semibold flex items-center justify-center transition-colors">
+          2
+        </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md">
+          Trang sau
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL: EDIT / CREATE SERVER MODAL OVERLAY -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-space-md hidden transition-all" id="editModal">
+<div class="bg-surface-container-low max-w-2xl w-full rounded-2xl shadow-2xl overflow-hidden flex flex-col transform transition-transform">
+<!-- Modal Header -->
+<div class="bg-surface-container-high px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Chỉnh sửa Máy chủ #SRV-1092</h3>
+<span class="font-code-sm text-code-sm text-surface-tint">Bản ghi: Minecraft SMP Survival S3 (node: VN-HN-01)</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded-lg hover:bg-surface-container-highest transition-colors" onclick="document.getElementById('editModal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Modal Body Form -->
+<div class="p-space-lg space-y-space-md max-h-[716px] overflow-y-auto">
+<!-- Field 1: Server Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Tên Máy Chủ (Display Name)</span>
+<span class="font-code-sm text-code-sm text-outline">Biểu diễn công khai</span>
+</label>
+<input class="w-full px-space-md py-2.5 bg-surface-container rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary-container" type="text" value="Minecraft SMP Survival S3"/>
+</div>
+<!-- Field 2: Game Engine Version & Port -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Phiên bản Game Kernel</label>
+<input class="w-full px-space-md py-2.5 bg-surface-container rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary-container" type="text" value="PaperMC 1.20.4"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Cổng kết nối (Server Port)</label>
+<input class="w-full px-space-md py-2.5 bg-surface-container rounded-lg text-primary font-code-md text-code-md focus:outline-none focus:ring-1 focus:ring-primary-container" type="number" value="25565"/>
+</div>
+</div>
+<!-- Field 3: RAM & CPU Hardware Allocation Sliders -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md bg-surface-container p-space-md rounded-xl">
+<!-- RAM Slider -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Cấp phát RAM</span>
+<span class="font-code-md text-code-md text-primary font-semibold" id="ramVal">8 GB DDR5</span>
+</div>
+<input class="w-full accent-primary-container cursor-pointer" id="ramSlider" max="32" min="2" oninput="document.getElementById('ramVal').innerText = this.value + ' GB DDR5'" step="2" type="range" value="8"/>
+<span class="font-code-sm text-code-sm text-outline">Khuyên dùng tối thiểu 6GB cho PaperMC</span>
+</div>
+<!-- CPU Selection -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Cấp phát vCPU Ryzen 9 7950X</label>
+<select class="w-full px-space-md py-2 bg-surface-container-high rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>2 vCPU Core @ 5.7GHz</option>
+<option selected="">4 vCPU Core @ 5.7GHz (Tối ưu)</option>
+<option>6 vCPU Core @ 5.7GHz</option>
+<option>8 vCPU Core Dedicated</option>
+</select>
+</div>
+</div>
+<!-- Field 4: Isolated MySQL DB Link -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">storage</span>
+<span>Tên CSDL MySQL Riêng (Database Name)</span>
+</span>
+<span class="font-code-sm text-code-sm text-tertiary-fixed font-medium">Bản ghi tự khởi tạo</span>
+</label>
+<div class="flex items-center bg-surface-container rounded-lg px-space-md py-1">
+<span class="font-code-md text-code-md text-outline">nexus_</span>
+<input class="w-full py-1.5 bg-transparent text-primary font-code-md text-code-md focus:outline-none" type="text" value="srv_mc_smp_db"/>
+</div>
+</div>
+<!-- Field 5: Auto Backup Toggle -->
+<div class="flex items-center justify-between bg-surface-container p-space-md rounded-xl">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Tự động sao lưu Snapshot hàng ngày</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lưu trữ 7 bản snapshot phân tán trên cụm S3 Storage</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="bg-surface-container-high px-space-lg py-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<!-- Delete Button (Destructive Drop) -->
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container text-error hover:bg-error-container/40 transition-colors font-label-md text-label-md" onclick="confirmDelete('#SRV-1092', 'Minecraft SMP Survival S3')">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>Xóa Máy Chủ (Drop Table)</span>
+</button>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md" onclick="document.getElementById('editModal').classList.add('hidden')">
+            Hủy bỏ
+          </button>
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container px-space-lg py-2 rounded-lg font-title-sm text-title-sm font-semibold hover:bg-primary-fixed-dim shadow-[0_0_12px_rgba(0,240,255,0.25)] transition-all" onclick="saveServerChanges()">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Lưu Thay Đổi (Cập nhật CSDL)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER (Secured Cluster Feedback) -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toastContainer">
+<div class="opacity-0 translate-y-3 transition-all duration-300 pointer-events-auto flex items-center gap-space-md bg-surface-container-highest/95 backdrop-blur-xl px-space-lg py-space-md rounded-xl shadow-2xl max-w-md" id="toastElement">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/20 flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">CSDL đã đồng bộ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate" id="toastMsg">Bản ghi #SRV-1092 được cập nhật thành công lúc 14:32:05.</span>
+</div>
+<button class="text-outline hover:text-on-surface ml-auto" onclick="hideToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic Toast Notification Controller
+  let toastTimer = null;
+  function triggerToast(message, isError = false) {
+    const toast = document.getElementById('toastElement');
+    const msgEl = document.getElementById('toastMsg');
+    if (!toast || !msgEl) return;
+    
+    msgEl.innerText = message;
+    
+    toast.classList.remove('opacity-0', 'translate-y-3');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      hideToast();
+    }, 4500);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toastElement');
+    if (toast) {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'translate-y-3');
+    }
+  }
+
+  // Confirm delete simulation
+  function confirmDelete(id, name) {
+    if (confirm(`CẢNH BÁO CƠ SỞ DỮ LIỆU:\nBạn có chắc chắn muốn XÓA vĩnh viễn thực thể ${id} (${name}) và drop toàn bộ bảng dữ liệu liên kết trên MySQL Cluster không? Hành động này không thể hoàn tác.`)) {
+      document.getElementById('editModal')?.classList.add('hidden');
+      triggerToast(`Đã DROP thành công bản ghi máy chủ ${id} khỏi cơ sở dữ liệu!`);
+    }
+  }
+
+  // Save changes handler
+  function saveServerChanges() {
+    document.getElementById('editModal')?.classList.add('hidden');
+    const now = new Date().toLocaleTimeString('vi-VN');
+    triggerToast(`CSDL đã đồng bộ: Bản ghi #SRV-1092 được cập nhật thành công lúc ${now}`);
+  }
+
+  // Select all table rows checkbox handler
+  document.getElementById('selectAll')?.addEventListener('change', function(e) {
+    const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+    checkboxes.forEach(cb => cb.checked = e.target.checked);
+  });
+</script></main></div></body></html>
